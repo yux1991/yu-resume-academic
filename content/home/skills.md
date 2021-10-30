@@ -25,8 +25,8 @@ feature:
   icon_pack: fas
   name: Statistics
 - description: 50%
-  icon: ai
-  icon_pack: custom
+  icon: brain
+  icon_pack: fas
   name: Artificial Intelligence
 
 # Uncomment to use emoji icons.
