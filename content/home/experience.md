@@ -22,28 +22,34 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
-    company_url: ''
-    company_logo: org-gc
-    location: California
-    date_start: '2021-01-01'
+  - title: Data Scientist
+    company: Amazon
+    company_url: 'https://www.amazon.com/'
+    company_logo: org-amz
+    location: Bellevue, WA
+    date_start: '2021-05-24'
     date_end: ''
     description: |2-
         Responsibilities include:
         
-        * Analysing
-        * Modelling
-        * Deploying
+        * Held meetings with the customers to understand the business scope, establish project timeline, present the updates, and reach agreement on the final deliveries.
+        * Performed exploratory data analysis and feature engineering to remove outliers, impute missing data and characterize the stationarity/correlation of the raw data.
+        * Designed the most suitable forecasting models based on the characteristics of the data and business scope, and then tuned the model hyper-parameters to achieve the optimal performance.
+        * Deployed the models on native Amazon web service (NAWS) and provided launch support to the customers.
         
-  - title: Professor of Semiconductor Physics
-    company: University X
-    company_url: ''
-    company_logo: org-x
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2020-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+  - title: Seismic Imager
+    company: CGG
+    company_url: 'https://www.cgg.com/'
+    company_logo: org-cgg
+    location: Houston, TX
+    date_start: '2020-01-06'
+    date_end: '2021-02-26'
+    description: |2-
+        Responsibilities include:
+        
+        * Provided optimal quality control for the input seismic time series data by querying and analyzing information from billions of seismic records with SQL and Hadoop/Spark big-data tools.
+        * Processed petabytes of seismic image sets by separating noise from signal using sparse representation, correcting artifacts with convolution/correlation, and applying interpolation with compressed sensing techniques.
+        * Created high-fidelity 3D seismic images and velocity models by solving the optimization problem to minimize the square loss between model and data through an iterative gradient descent method.
 
 design:
   columns: '2'
