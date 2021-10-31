@@ -9,7 +9,7 @@ date: "2021-10-31"
 external_link: ""
 
 image:
-  caption: Domain boundaries simulation
+  caption: PyRHEED
   focal_point: Smart
 
 links:
