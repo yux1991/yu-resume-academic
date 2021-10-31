@@ -25,10 +25,10 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: PhD in Physics
+  - course: Ph.D. in Physics
     institution: Rensselaer Polytechnic Institute
     year: 2019
-  - course: BS in Physics
+  - course: B.S. in Physics
     institution: Wuhan University
     year: 2014
 
@@ -64,6 +64,6 @@ email: "yux1991@gmail.com"
 highlight_name: true
 ---
 
-Yu Xiang is a Data Scientist at Amazon. He got the PhD degree in Physics at Rensselaer Polytechnic Institute in 2019. When he was a PhD student, his research focused on electron diffraction data analysis. After graduation, he joined CGG as a Seismic Imager, helping oil companies create high-fidelity subsurface images by analyzing the seismic data. One and half year later, he joined Amazon as a Data Scientist. His career interests include computer vision, natural language processing and data mining.
+Yu Xiang got his PhD degree in Physics at Rensselaer Polytechnic Institute in 2019. When he was a PhD student, his research focused on electron diffraction data analysis. After graduation, he joined CGG as a Seismic Imager, helping oil companies create high-fidelity subsurface images by analyzing the seismic data. One and half year later, he joined Amazon as a Data Scientist. His career interests include computer vision, natural language processing and data mining.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}} or {{< staticref "uploads/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download his {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}} or {{< staticref "uploads/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
