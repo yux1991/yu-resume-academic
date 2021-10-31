@@ -22,9 +22,9 @@ feature:
 - icon: chart-line
   icon_pack: fas
   name: Statistics
-- icon: brain
+- icon: cogs
   icon_pack: fas
-  name: Artificial Intelligence
+  name: Machine Learning
 
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
