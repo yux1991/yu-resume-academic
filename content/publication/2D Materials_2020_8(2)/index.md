@@ -42,8 +42,6 @@ publication_types: ["2"]
 publication: In *2D Materials*
 publication_short: In *2D Mater.*
 
-abstract: Molybdenum disulfide (MoS2) on the c-plane sapphire has been a very popular system to study in the two-dimensional (2D) materials community. Bottom-up synthesis of monolayer (ML) MoS2 with excellent electrical properties has been achieved on sapphire by various methods, making it a very promising candidate to be used in the next generation nano-electronic devices. However, large-area ML MoS2 with comparable quality as the relatively small size exfoliated ML remains quite a challenge. To overcome this bottle neck, a comprehensive understanding of the structure of the as-grown ML material is an essential first step. Here, we report a detailed structural characterization of wafer-scale continuous epitaxial ML MoS2 grown by metalorganic chemical vapor deposition on sapphire using an azimuthal reflection high-energy electron diffraction (ARHEED) technique. With ARHEED we can map not only 2D but also 3D reciprocal space structure of the ML statistically. From the oscillation in the ARHEED intensity profile along the vertical direction of the ML, we derived a real space distance of ~3 Å at the interface of ML and sapphire. Quantitative diffraction spot broadening analyses of the 3D reciprocal space map reveals low density defects and a small angular misalignment of orientation domains in ML MoS2. Based on atomic force microscopy height distribution analysis, cross-section scanning transmission electron microscopy, and density functional theory calculations, we suggest that there exists a passivation layer between MoS2 ML and sapphire substrate. This ARHEED methodology also has been applied to ML WS2 and is expected to be applicable to other ML transition metal dichalcogenides on arbitrary crystalline or non-crystalline substrates.
-
 # Summary. An optional shortened abstract.
 summary: Azimuthal RHEED study about monolayer MoS2.
 
@@ -67,3 +65,10 @@ url_source: ''
 url_video: ''
 
 ---
+## Abstract
+
+Molybdenum disulfide (MoS2) on the c-plane sapphire has been a very popular system to study in the two-dimensional (2D) materials community. Bottom-up synthesis of monolayer (ML) MoS2 with excellent electrical properties has been achieved on sapphire by various methods, making it a very promising candidate to be used in the next generation nano-electronic devices. However, large-area ML MoS2 with comparable quality as the relatively small size exfoliated ML remains quite a challenge. 
+
+To overcome this bottle neck, a comprehensive understanding of the structure of the as-grown ML material is an essential first step. Here, we report a detailed structural characterization of wafer-scale continuous epitaxial ML MoS2 grown by metalorganic chemical vapor deposition on sapphire using an azimuthal reflection high-energy electron diffraction (ARHEED) technique. With ARHEED we can map not only 2D but also 3D reciprocal space structure of the ML statistically. From the oscillation in the ARHEED intensity profile along the vertical direction of the ML, we derived a real space distance of ~3 Å at the interface of ML and sapphire. Quantitative diffraction spot broadening analyses of the 3D reciprocal space map reveals low density defects and a small angular misalignment of orientation domains in ML MoS2. Based on atomic force microscopy height distribution analysis, cross-section scanning transmission electron microscopy, and density functional theory calculations, we suggest that there exists a passivation layer between MoS2 ML and sapphire substrate. 
+
+This ARHEED methodology also has been applied to ML WS2 and is expected to be applicable to other ML transition metal dichalcogenides on arbitrary crystalline or non-crystalline substrates.
