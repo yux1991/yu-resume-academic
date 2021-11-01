@@ -14,7 +14,7 @@ organizations:
   url: https://www.amazon.com/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Data Scientist, PhD in Physics.
+bio: PhD in Physics. Interested in artificial intelligence.
 
 # Interests to show in About widget
 interests:
