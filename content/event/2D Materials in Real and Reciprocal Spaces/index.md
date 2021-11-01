@@ -56,6 +56,6 @@ url_video: "https://youtu.be/UTITLCcExoU"
 #   Otherwise, set `projects = []`.
 # projects:
 # - example
-# ---
+---
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/UTITLCcExoU/0.jpg)](https://www.youtube.com/watch?v=UTITLCcExoU)
