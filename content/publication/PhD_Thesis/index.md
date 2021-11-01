@@ -1,5 +1,5 @@
 ---
-title: "PhD Thesis: Electron Diffraction From Two Dimensional Materials"
+title: "Electron Diffraction From Two Dimensional Materials"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
