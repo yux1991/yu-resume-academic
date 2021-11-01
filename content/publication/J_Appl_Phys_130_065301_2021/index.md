@@ -35,8 +35,6 @@ publication_types: ["2"]
 publication: In *Journal of Applied Physics*
 publication_short: In *J. Appl. Phys.*
 
-abstract: There has been increasing interest in the fabrication of thin film materials with mixed dimensions, in particular, 2D to 3D and 3D to 2D heterostructures. Often, if the interface interaction is weak, the lattice matching criterion between the substrate and overlayer can be lifted. If the overlayer lattice is completely relaxed, it can form an incommensurate film on the mismatched substrate. In this work, we show that domain boundaries are inherent in the incommensurate epitaxial films due to random nucleation sites of domains in an overlayer. The nature and origin of the incommensurate domain boundaries are different from the conventional dislocation boundaries that come from the relaxation of strain due to film–substrate lattice mismatch. We propose that the formation of such domain boundaries can be studied through Voronoi tessellation. Using a case study of monolayer WS2 on sapphire (2D on 3D), we show the formation of domain boundaries that compared well with a recent experiment reported in the literature. In the Voronoi tessellation, we also show quantitatively that the average domain size depends on the density of nucleation sites. The conclusion of this case study may be generalized to any incommensurate epitaxial films when the interface interaction is weak.
-
 
 # Summary. An optional shortened abstract.
 summary: Incommensurate domain boundaries simulation via Voronoi tessellation.
@@ -61,3 +59,5 @@ url_source: ''
 url_video: ''
 
 ---
+## Abstract
+There has been increasing interest in the fabrication of thin film materials with mixed dimensions, in particular, 2D to 3D and 3D to 2D heterostructures. Often, if the interface interaction is weak, the lattice matching criterion between the substrate and overlayer can be lifted. If the overlayer lattice is completely relaxed, it can form an incommensurate film on the mismatched substrate. In this work, we show that domain boundaries are inherent in the incommensurate epitaxial films due to random nucleation sites of domains in an overlayer. The nature and origin of the incommensurate domain boundaries are different from the conventional dislocation boundaries that come from the relaxation of strain due to film–substrate lattice mismatch. We propose that the formation of such domain boundaries can be studied through Voronoi tessellation. Using a case study of monolayer WS2 on sapphire (2D on 3D), we show the formation of domain boundaries that compared well with a recent experiment reported in the literature. In the Voronoi tessellation, we also show quantitatively that the average domain size depends on the density of nucleation sites. The conclusion of this case study may be generalized to any incommensurate epitaxial films when the interface interaction is weak.
