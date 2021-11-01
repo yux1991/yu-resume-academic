@@ -13,17 +13,15 @@ address:
   country: United States
 
 summary: Complimentary AFM and RHEED studies for real and reciprocal space analysis.
-abstract: "There has been an explosive growth in the study of 2D materials due to their novel electronic, electrical, optical, and magnetic properties. The structure of a 2D material not only strongly affects the properties of the material itself but also influences the epitaxial growth of other 2D materials when it is used as a template. However, a layer or a few-layers thick material is challenging to characterize due to the fact that the total number of atoms in the layer(s) is small compared with that of a thick layer. The current push for a quantitative characterization of the symmetry and perfection of those 2D materials deposited on or transferred to a surface has triggered us to apply surface sensitive techniques such as Reflection High Energy Electron Diffraction (RHEED) and Atomic Force Microscopy (AFM) in 2D systems.
-
-While RHEED tells us the crystal structural information in reciprocal space, AFM gives real space morphological information. They are complimentary to each other. In this report, we present the RHEED and AFM studies of two common 2D materials: a single crystal monolayer graphene on an amorphous SiO2 substrate sample and a monolayer WSe2 on the c-plane sapphire sample. We demonstrate the use of RHEED to map out the reciprocal space structure and the use of AFM to measure the layer thickness and surface roughness of those materials. We show that both techniques can be used to determine the interlayer spacing of the 2D material and they agree with each other within experimental uncertainty.
-
+abstract: "There has been an explosive growth in the study of 2D materials due to their novel electronic, electrical, optical, and magnetic properties. The structure of a 2D material not only strongly affects the properties of the material itself but also influences the epitaxial growth of other 2D materials when it is used as a template. However, a layer or a few-layers thick material is challenging to characterize due to the fact that the total number of atoms in the layer(s) is small compared with that of a thick layer. The current push for a quantitative characterization of the symmetry and perfection of those 2D materials deposited on or transferred to a surface has triggered us to apply surface sensitive techniques such as Reflection High Energy Electron Diffraction (RHEED) and Atomic Force Microscopy (AFM) in 2D systems.\n
+While RHEED tells us the crystal structural information in reciprocal space, AFM gives real space morphological information. They are complimentary to each other. In this report, we present the RHEED and AFM studies of two common 2D materials: a single crystal monolayer graphene on an amorphous SiO2 substrate sample and a monolayer WSe2 on the c-plane sapphire sample. We demonstrate the use of RHEED to map out the reciprocal space structure and the use of AFM to measure the layer thickness and surface roughness of those materials. We show that both techniques can be used to determine the interlayer spacing of the 2D material and they agree with each other within experimental uncertainty.\n
 This work is supported by NSF DMR-1539916, and NY State Empire State Development's Division of Science, Technology and Innovation (NYSTAR) through Focus Center Contract C150117 and Rensselaer."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2018-09-19"
-date_end: "2018-09-19"
-all_day: true
+date: "2018-09-19T14:45:00Z"
+date_end: "2018-09-19T15:00:00Z"
+all_day: false
 
 # Schedule page publish date (NOT talk date).
 publishDate: "2020-02-19"
