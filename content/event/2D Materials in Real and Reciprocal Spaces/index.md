@@ -58,6 +58,6 @@ url_video: "https://youtu.be/UTITLCcExoU"
 # - example
 ---
 
-Click the image bellow to watch the recorded video on YouTube:
+Check out the recorded video on YouTube:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/UTITLCcExoU/0.jpg)](https://www.youtube.com/watch?v=UTITLCcExoU)
+{{< youtube UTITLCcExoU >}}
