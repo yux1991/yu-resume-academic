@@ -14,14 +14,11 @@ menu_text_active = "rgb(255, 0, 60)"
 menu_title = "#000"
 
 [dark]
-  # Primary
-  primary = "24fffe"
-  
   # Menu
-  menu_primary = "#282828"
-  menu_text = "#24fffe"
-  menu_text_active = "#fcee0a"
-  menu_title = "#24fffe"
+  menu_primary = "#24fffe"
+  menu_text = "#000"
+  menu_text_active = "rgb(255, 0, 60)"
+  menu_title = "#000"
 
   # Backgrounds
   background = "#282828"
