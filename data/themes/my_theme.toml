@@ -15,7 +15,7 @@ menu_title = "#000"
 
 [dark]
   # Menu
-  menu_primary = "#20e6e5"
+  menu_primary = "#1dcccb"
   menu_text = "#000"
   menu_text_active = "rgb(255, 0, 60)"
   menu_title = "#000"
