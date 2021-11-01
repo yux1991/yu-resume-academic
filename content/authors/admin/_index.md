@@ -14,7 +14,7 @@ organizations:
   url: https://www.amazon.com/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My career interests include computer vision, natural language processing and data mining.
+bio: Data Scientist, PhD in Physics.
 
 # Interests to show in About widget
 interests:
