@@ -1,15 +1,36 @@
-This project is used for editing the images in the curvelet domain. It allows visualization of the curvelet structure and applying threshold denoise for each wedge in the curvelet domain.
+---
+title: HighDimEditor
+summary: Edit images in the curvelet domain
+tags:
+- Computer Vision
+date: "2021-10-31"
 
-## Requirements
-- matplotlib 3.3.1
-- numpy 1.19.2
-- pillow 7.2.0
-- pyct 1.0
-- pyqt5 5.15.1
-- pyqtchart 5.15.1
-- pyqtdatavisualization 5.15.1
-- rawpy 0.15.0
-- scipy 1.5.2
+# Optional external URL for project (replaces project detail page).
+external_link: ""
+
+image:
+  caption: Lena in the curvelet domain
+  focal_point: Smart
+
+links:
+- icon: github
+  icon_pack: fab
+  name: GitHub Repository
+  url: https://github.com/yux1991/HighDimEditor
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+
+# Slides (optional).
+#   Associate this project with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+# slides: example
+---
+
+This project is used for editing the images in the curvelet domain. It allows visualization of the curvelet structure and applying threshold denoise for each wedge in the curvelet domain.
     
 ## Modules 
 - browser: browse files inside the working directory
