@@ -33,7 +33,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: In *Applied Surface Science*
-publication_short: In *ASS*
+publication_short: In *Appl. Surf. Sci.*
 
 abstract: Conventional hetero-epitaxial films are typically grown on lattice and symmetry matched single crystal substrates. We demonstrated the epitaxial growth of orthorhombic SnS film (∼500 nm thick) on single crystal, monolayer graphene that was transferred on the amorphous SiO2/Si substrate. Using X-ray pole figure analysis we examined the structure, quality and epitaxy relationship of the SnS film grown on the single crystal graphene and compared it with the SnS film grown on commercial polycrystalline graphene. We showed that the SnS films grown on both single crystal and polycrystalline graphene have two sets of orientation domains. However, the crystallinity and grain size of the SnS film improve when grown on the single crystal graphene. Reflection high-energy electron diffraction measurements show that the near surface texture has more phases as compared with that of the entire film. The surface texture of a film will influence the growth and quality of film grown on top of it as well as the interface formed. Our result offers an alternative approach to grow a hetero-epitaxial film on an amorphous substrate through a single crystal graphene buffer layer. This strategy of growing high quality epitaxial thin film has potential applications in optoelectronics.
 
