@@ -196,18 +196,13 @@ $$
   $$
     \hat{𝜋}(z)=n_z/n.
   $$
+
   $$
-    𝛾_i^j=p(z=j∣x_i)
-  $$
-  $$
-    =p(z=j,x_i)p(x_i)
-  $$
-  $$
-    \hat{\mu}_z=1/n_z\Sigma_{i:z_i=z} x_i.
+    \hat{\mu}_z=1/n_z.
   $$
 
   $$
-    \hat{\Sigma}_z=1/n_z\Sigma_{i:z_i=z} (x_i−\hat{\mu}_z)(x_i−\hat{\mu}_z)^T.
+    \hat{\Sigma}_z=1/n_z.
   $$
 
 * Cluster Responsibilities: 
