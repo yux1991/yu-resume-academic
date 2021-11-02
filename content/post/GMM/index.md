@@ -137,7 +137,7 @@ $$
   * To estimate $𝜇$ and $Σ$ from a sample $x_1,⋯,x_n$ i.i.d. from a $𝒩(𝜇,Σ)$ distribution, we need to maximize the log joint density: 
 
   $$
-    ∇_𝜇J(𝜇,Σ)=0⟹\hat{𝜇}_{MLE
+    ∇_𝜇J(𝜇,Σ)=0⟹\hat{𝜇}_{MLE}
   $$
   $$
     =1/n∑_{i=1}^n x_i.
@@ -145,7 +145,7 @@ $$
     ∇_ΣJ(𝜇,Σ)=0⟹\hat{Σ}_{MLE}
   $$
   $$
-    =1/n∑_{i=1}^n (x_i−\hat{𝜇}{MLE})^T(x_i−\hat{𝜇}_{MLE}).
+    =1/n∑_{i=1}^n (x_i−\hat{𝜇}_{MLE})^T(x_i−\hat{𝜇}_{MLE}).
   $$
 
 * Estimating the GMM using maximum likelihood: 
@@ -169,7 +169,7 @@ $$
   * Plugging in the probability density for $𝒩(𝜇,Σ)$, we get the GMM log-likelihood:
 
   $$
-    J(𝜋,𝜇,Σ)=∑_{i=1}^n log{∑_{z=1}^k \frac{𝜋_z}{\sqrt{∣2𝜋Σz∣}} \exp{−1/2(x−𝜇_z)^TΣ^{−1}(x−𝜇z)}.
+    J(𝜋,𝜇,Σ)=∑_{i=1}^n log∑_{z=1}^k \frac{𝜋_z}{\sqrt{∣2𝜋Σz∣}} \exp{−1/2(x−𝜇_z)^TΣ^{−1}(x−𝜇_z)}.
   $$ 
 
   * Issues with MLE for GMM: 
@@ -192,10 +192,10 @@ $$
     \hat{𝜋}(z)=n_z/n.
   $$
   $$
-    \hat{𝜇}_z=1/n_z∑_{i:z_i=z}x_i.
+    \hat{𝜇}_z=1/n_z∑_{i\:z_i=z}x_i.
   $$
   $$
-    \hat{Σ}_z=1/n_z∑_{i:z_i=z}(x_i−\hat{𝜇}_z)(x_i−\hat{𝜇}_z)^T.
+    \hat{Σ}_z=1/n_z∑_{i\:z_i=z}(x_i−\hat{𝜇}_z)(x_i−\hat{𝜇}_z)^T.
   $$
 
 * Cluster Responsibilities: 
