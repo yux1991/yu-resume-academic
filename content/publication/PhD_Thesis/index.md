@@ -48,7 +48,14 @@ url_source: ''
 url_video: ''
 
 ---
-## Abstract
+## Yu Xiang's PhD Committee:
+
+* [**Dr. Gwo-Ching Wang**](https://science.rpi.edu/physics/faculty/gwo-ching-wang), Chair
+* [**Dr. Toh-Ming Lu**](https://science.rpi.edu/physics/faculty/toh-ming-lu), Co-Chair
+* [**Dr. Humberto Terrones**](https://science.rpi.edu/physics/faculty/humberto-terrones)
+* [**Dr. Jian Shi**](http://homepages.rpi.edu/~shij4/about.html)
+
+## Abstract of the PhD Thesis:
 
 There has been an explosive growth in the study of two dimensional (2D) materials governed by van der Waals interaction in the last decade due to their novel electronic, electrical, optical, and magnetic properties that were not known or discovered in the past. Those properties are strongly affected by their structure and long-range order perfection. A thorough structural characterization of 2D materials is the central issue but it has been challenging due to the inherent limited amounts of atoms in 2D materials under study. Fortunately, electron interacts strongly with matters and allows structure and perfection of 2D materials to be studied. In this thesis the near surface sensitive azimuthal reflection high-energy electron diffraction (ARHEED) developed at Rensselaer Physics was applied for the first time to map out:
 
@@ -68,4 +75,4 @@ Through quantitative analysis of the 2D reciprocal space map, one can extract re
 
 The HRLEED study of single crystal graphene on Cu(111) reveals that diffraction peaks have very similar full-width-at-half-maximums but the average broadening is significantly (~three times) larger than the instrument response (~0.03 Å-1). This suggests a noticeable number of defects exist within both graphene and copper surface. From the LEED IV curve after an inner potential correction, the graphene to Cu(111) surface distance is estimated to be d = 3.49 ± 0.01 Å. This value is close to that (d = 3.27 ± 0.07 Å) determined by RHEED from multilayer graphene and the interlayer spacing of 3.36 Å in graphite. This suggests that the coupling between graphene and Cu metal is similar to a pure van der Waals interaction.
 
-For graphene buffered van der Waals epitaxial tin mono-sulfide (SnS) thin film, the RHEED patterns show the (010) orientation near the surface of the SnS film grown on the single crystal graphene and a dominant (111) orientation near the surface of the SnS film grown on the polycrystalline graphene. Additional minor orientations near the surface were observed by RHEED that X-ray diffraction (XRD) is not able to detect."
+For graphene buffered van der Waals epitaxial tin mono-sulfide (SnS) thin film, the RHEED patterns show the (010) orientation near the surface of the SnS film grown on the single crystal graphene and a dominant (111) orientation near the surface of the SnS film grown on the polycrystalline graphene. Additional minor orientations near the surface were observed by RHEED that X-ray diffraction (XRD) is not able to detect.
