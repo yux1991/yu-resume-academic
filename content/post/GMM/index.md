@@ -42,11 +42,14 @@ categories:
 ### Introduction
 
 #### What is Gaussian Mixture Model?
-The Gaussian mixture model has the form:
+The Gaussian mixture model (GMM) has the form:
 $$
   f(x)=\sum_{m=1}^M\alpha_m\phi(x;\mu_m,\Sigma_m),
 $$
 with mixing proportions $\alpha_m$, $\Sigma_m\alpha_m=1$, and each Gaussian density has a mean $\mu_m$ and covariance matrix $\Sigma_m$. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.
+
+#### Applications of GMM
+GMM have been used recently for feature extraction from speech data for use in speech recognition systems[^1]. They have also been used extensively in object tracking of multiple objects, where the number of mixture components and their means predict object locations at each frame in a video sequence[^2]. The EM algorithm is used to update the component means over time as the video frames update, allowing object tracking.
 
 ### Overview
 
@@ -258,12 +261,12 @@ which is the responsibility that cluster $j$ takes for observation $x_i$.
 >  $$ 
 >
 >    * **While not converge**: 
->      * For $i=1,⋯,n$ and $j=1,⋯,k$: 
+>      * For $i=1,⋯,n$ and $j=1,⋯,k$: // the "E" step 
 >   $$
 >     𝛾_i^j=\frac{𝜋_j^{(t)}𝒩(x_i∣𝜇_j^{(t)},Σ_j^{(t)})}{∑_{c=1}^k𝜋_c𝒩(x_i∣𝜇_c,Σ_c)}
->   $$ // the "E step 
+>   $$
 >
->      * For $c=1,⋯,k$: // the "M step 
+>      * For $c=1,⋯,k$: // the "M" step 
 >   
 >   $$
 >     n_c=∑_{i=1}^n𝛾_i^c.
@@ -287,3 +290,6 @@ which is the responsibility that cluster $j$ takes for observation $x_i$.
   * If we fix the cluster covariance matrix to be $𝜎^2I$, 
   * As we take $𝜎^2⟶0$, the update equations converge to doing k-means. 
   * Soft assignments converge to hard assignments (because of the tail behavior of Gaussian).
+
+[^1]: Deng, L. (2014). Automatic Speech Recognition- A Deep Learning Approach (pp. 6-8). Springer.
+[^2]: Santosh, D. (2013). Tracking Multiple Moving Objects Using Gaussian Mixture Model. International Journal of Soft Computing and Engineering, 3-2, 114-119.
