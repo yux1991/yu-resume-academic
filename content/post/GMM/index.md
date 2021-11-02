@@ -196,7 +196,12 @@ $$
   $$
     \hat{𝜋}(z)=n_z/n.
   $$
-  
+  $$
+    𝛾_i^j=p(z=j∣x_i)
+  $$
+  $$
+    =p(z=j,x_i)p(x_i)
+  $$
   $$
     \hat{\mu}_z=1/n_z\Sigma_{i:z_i=z} x_i.
   $$
