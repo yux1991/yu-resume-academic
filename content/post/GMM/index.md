@@ -41,7 +41,7 @@ categories:
 ---
 ### Introduction
 
-## What is Gaussian Mixture Model?
+#### What is Gaussian Mixture Model?
 The Gaussian mixture model has the form:
 $$
   f(x)=\sum_{m=1}^M\alpha_m\phi(x;\mu_m,\Sigma_m),
@@ -125,15 +125,18 @@ $$
   log p(x∣𝜇,Σ)=−1/2log|2𝜋Σ|−1/2(x−𝜇)^TΣ^{−1}(x−𝜇).
 $$
 
-  * The log joint density from a sample $x_1,⋯,x_n$ i.i.d. from a 𝒩(𝜇,Σ) distribution is: 
+  * The log joint density from a sample $x_1,⋯,x_n$ i.i.d. from a $𝒩(𝜇,Σ)$ distribution is: 
 $$
-  J(𝜇,Σ)=∑_{i=1}^n log p(x∣𝜇,Σ)=−n/2log|2𝜋Σ|−1/2∑_{i=1}^n(x−𝜇)^T𝛴^{−1}(x−𝜇).
+  J(𝜇,Σ)=∑_{i=1}^n log p(x∣𝜇,Σ)\\\\
+  =−n/2log|2𝜋Σ|−1/2∑_{i=1}^n(x−𝜇)^T𝛴^{−1}(x−𝜇).
 $$
 
-  * To estimate $𝜇$ and $Σ$ from a sample $x_1,⋯,x_n$ i.i.d. from a 𝒩(𝜇,Σ) distribution, we need to maximize the log joint density: 
+  * To estimate $𝜇$ and $Σ$ from a sample $x_1,⋯,x_n$ i.i.d. from a $𝒩(𝜇,Σ)$ distribution, we need to maximize the log joint density: 
 $$
-  ∇_𝜇J(𝜇,Σ)=0⟹\hat{𝜇}_{MLE}=1/n∑_{i=1}^n x_i.
-  ∇_ΣJ(𝜇,Σ)=0⟹\hat{Σ}_{MLE}=1/n∑_{i=1}^n (x_i−\hat{𝜇}{MLE})^T(x_i−\hat{𝜇}_{MLE}).
+  ∇_𝜇J(𝜇,Σ)=0⟹\hat{𝜇}_{MLE}\\\\
+  =1/n∑_{i=1}^n x_i.\\\\
+  ∇_ΣJ(𝜇,Σ)=0⟹\hat{Σ}_{MLE}\\\\
+  =1/n∑_{i=1}^n (x_i−\hat{𝜇}{MLE})^T(x_i−\hat{𝜇}_{MLE}).
 $$
 
 * Estimating the GMM using maximum likelihood: 
@@ -141,8 +144,8 @@ $$
   * Find parameter values with highest likelihood for the observed data. 
   * The model likelihood for $𝒟=(x_1,⋯,x_n)$ sampled i.i.d. from a GMM is: 
 $$
-L(𝜋,𝜇,Σ)=∏_{i=1}^n p(xi) 
-        =∏_{i=1}^n ∏_{z=1}^k 𝜋z𝒩(x_i∣𝜇_z,Σ_z).
+  L(𝜋,𝜇,Σ)=∏_{i=1}^n p(xi)\\\\
+  =∏_{i=1}^n ∏_{z=1}^k 𝜋z𝒩(x_i∣𝜇_z,Σ_z).
 $$
 
   * The objective function is: 
@@ -191,39 +194,39 @@ $$
   * The vector $(𝛾_i^1,⋯,𝛾_i^k)$ is exactly the soft assignment for $x_i$. 
 
 * Algorithm
-  * **Algorithm: EM algorithm for GMM** 
-  ---
-    * **Input**: 
-      * $𝒟={x_1,⋯,x_n}⊂𝒳$. 
-      * GMM (k components): 
-  $$
-    𝜋=(𝜋_1,⋯𝜋_k), 
-    𝜇=(𝜇_1,⋯,𝜇_k), 
-    Σ=(Σ_1,⋯,Σ_k).
-  $$ 
-
-    * **Initialize**: 
-  $$
-    𝜋(0),𝜇(0),Σ(0),t=0.
-  $$ 
-
-    * **While not converge**: 
-      * For $i=1,⋯,n$ and $j=1,⋯,k$: 
-  $$
-    𝛾_i^j=\frac{𝜋_j^{(t)}𝒩(x_i∣𝜇_j^{(t)},Σ_j^{(t)})}{∑_{c=1}^k𝜋_c𝒩(x_i∣𝜇_c,Σ_c)}
-  $$ 
-  // the "E step 
-
-      * For $c=1,⋯,k$: // the "M step 
-  $$
-    n_c=∑_{i=1}^n𝛾_i^c.
-    𝜇(t+1)c⟵1/n_c∑_{i=1}^n𝛾_i^c x_i.
-    Σ(t+1)c⟵1/n_c∑_{i=1}^n𝛾_i^c (x_i−𝜇_c^{(t+1)})(x_i−𝜇_c^{(t+1)})^T.
-    𝜋(t+1)c⟵n_c/n.
-    t⟵t+1
-  $$
-
-    * **Return** $\hat{𝜋}, \hat{𝜇}, \hat{Σ}$. 
+> * **Algorithm: EM algorithm for GMM** 
+>  ---
+>    * **Input**: 
+>      * $𝒟={x_1,⋯,x_n}⊂𝒳$. 
+>      * GMM (k components): 
+>  $$
+>    𝜋=(𝜋_1,⋯𝜋_k), 
+>    𝜇=(𝜇_1,⋯,𝜇_k), 
+>    Σ=(Σ_1,⋯,Σ_k).
+>  $$ 
+>
+>    * **Initialize**: 
+>  $$
+>    𝜋(0),𝜇(0),Σ(0),t=0.
+>  $$ 
+>
+>    * **While not converge**: 
+>      * For $i=1,⋯,n$ and $j=1,⋯,k$: 
+>  $$
+>    𝛾_i^j=\frac{𝜋_j^{(t)}𝒩(x_i∣𝜇_j^{(t)},Σ_j^{(t)})}{∑_{c=1}^k𝜋_c𝒩(x_i∣𝜇_c,Σ_c)}
+>  $$ 
+>  // the "E step 
+>
+>      * For $c=1,⋯,k$: // the "M step 
+>  $$
+>    n_c=∑_{i=1}^n𝛾_i^c.
+>    𝜇(t+1)c⟵1/n_c∑_{i=1}^n𝛾_i^c x_i.
+>    Σ(t+1)c⟵1/n_c∑_{i=1}^n𝛾_i^c (x_i−𝜇_c^{(t+1)})(x_i−𝜇_c^{(t+1)})^T.
+>    𝜋(t+1)c⟵n_c/n.
+>    t⟵t+1
+>  $$
+>
+>    * **Return** $\hat{𝜋}, \hat{𝜇}, \hat{Σ}$. 
 
 * Relation to k-Means: 
   * If we fix the cluster covariance matrix to be $𝜎^2I$, 
