@@ -50,9 +50,9 @@ with mixing proportions $\alpha_m$, $\Sigma_m\alpha_m=1$, and each Gaussian dens
 
 ### Overview
 
-* Gaussian Mixture Model Parameters (k Components): 
+* Gaussian Mixture Model Parameters ($k$ Components): 
   * Clustering probabilities: 
-    $$ 𝜋=(𝜋_1,⋯𝜋_k). $$
+    $$ 𝜋=(𝜋_1,⋯,𝜋_k). $$
   * Cluster means: 
     $$ 𝜇=(𝜇_1,⋯,𝜇_k). $$
   * Cluster covariance matrices: 
@@ -89,7 +89,8 @@ $$
 
 ### Mixture Models: 
 
-* Margin Distribution: The margin distribution for a single observation $x$ is: 
+* Margin Distribution: 
+  * The margin distribution for a single observation $x$ is: 
 $$
   p(x)=∑_{z=1}^k p(x,z)=∑_{z=1}^k 𝜋_z𝒩(x∣𝜇_z,Σ_z).
 $$
@@ -97,7 +98,8 @@ $$
   * Notes: 
     * $p(x)$ is a convex combination of probability densities. 
 
-* Mixture Distributions (or Mixture Models): A probability density $p(x)$ represents a mixture distribution or mixture model, if we can write it as a convex combination of probability densities. That is: 
+* Mixture Distributions (or Mixture Models): 
+  * A probability density $p(x)$ represents a mixture distribution or mixture model, if we can write it as a convex combination of probability densities. That is: 
 $$
   p(x)=Σ_{i=1}^k w_ip_i(x),
 $$ 
@@ -158,7 +160,7 @@ $$
   * The model likelihood for $𝒟=(x_1,⋯,x_n)$ sampled i.i.d. from a GMM is: 
 
   $$
-    L(𝜋,𝜇,Σ)=∏_{i=1}^n p(xi)
+    L(𝜋,𝜇,Σ)=∏_{i=1}^n p(x_i)
   $$
   $$
     =∏_{i=1}^n ∏_{z=1}^k 𝜋_z𝒩(x_i∣𝜇_z,Σ_z).
@@ -173,8 +175,12 @@ $$
   * Plugging in the probability density for $𝒩(𝜇,Σ)$, we get the GMM log-likelihood:
 
   $$
-    J(𝜋,𝜇,Σ)=∑_{i=1}^n log∑_{z=1}^k \frac{𝜋_z}{\sqrt{∣2𝜋Σ_z∣}} \exp{−1/2(x−𝜇_z)^TΣ^{−1}(x−𝜇_z)}.
-  $$ 
+    J(𝜋,𝜇,Σ)=
+  $$
+  $$
+    ∑_{i=1}^n log∑_{z=1}^k \frac{𝜋_z}{\sqrt{∣2𝜋Σ_z∣}} \exp{−1/2(x−𝜇_z)^TΣ^{−1}(x−𝜇_z)}.
+  $$
+  
 
   * Issues with MLE for GMM: 
     * No closed form expression for MLE. 
@@ -190,10 +196,7 @@ $$
   * Suppose we observe $(x_1,z_1),⋯(x_n,z_n)$ i.i.d. from GMM $p(x,z)$. Then find MLE is easy: 
 
   $$
-    n_z=∑_i^n=1(z_i=z).
-  $$
-  
-  $$
+    n_z=∑_i^n=1(z_i=z),
     \hat{𝜋}(z)=n_z/n.
   $$
 
@@ -237,7 +240,7 @@ which is the responsibility that cluster $j$ takes for observation $x_i$.
 >  ---
 >    * **Input**: 
 >      * $𝒟={x_1,⋯,x_n}⊂𝒳$. 
->      * GMM (k components): 
+>      * GMM ($k$ components): 
 >   
 >   $$
 >     𝜋=(𝜋_1,⋯𝜋_k),
@@ -266,13 +269,13 @@ which is the responsibility that cluster $j$ takes for observation $x_i$.
 >     n_c=∑_{i=1}^n𝛾_i^c.
 >   $$
 >   $$
->     𝜇(t+1)c⟵1/n_c∑_{i=1}^n𝛾_i^c x_i.
+>     𝜇_c^{(t+1)}⟵1/n_c∑_{i=1}^n𝛾_i^c x_i.
 >   $$
 >   $$
->     Σ(t+1)c⟵1/n_c∑_{i=1}^n𝛾_i^c (x_i−𝜇_c^{(t+1)})(x_i−𝜇_c^{(t+1)})^T.
+>     Σ_c^{(t+1)}⟵1/n_c∑_{i=1}^n𝛾_i^c (x_i−𝜇_c^{(t+1)})(x_i−𝜇_c^{(t+1)})^T.
 >   $$
 >   $$
->     𝜋(t+1)c⟵n_c/n.
+>     𝜋_c^{(t+1)}⟵n_c/n.
 >   $$
 >   $$
 >     t⟵t+1
