@@ -198,11 +198,11 @@ $$
   $$
   
   $$
-    \hat{𝜇}_z=1/n_z∑_{i with z_i=z}x_i.
+    \hat{𝜇}_z=1/n_z∑_{i with z_i=z} x_i.
   $$
-  
+
   $$
-    \hat{Σ}_z=1/n_z∑_{i with z_i=z}(x_i−\hat{𝜇}_z)(x_i−\hat{𝜇}_z)^T.
+    \hat{Σ}_z=1/n_z∑_{i with z_i=z} (x_i−\hat{𝜇}_z)(x_i−\hat{𝜇}_z)^T.
   $$
 
 * Cluster Responsibilities: 
