@@ -39,40 +39,42 @@ categories:
 - Review
 
 ---
+## Introduction
+
+### What is Gaussian Mixture Model?
+The Gaussian mixture model has the form:
+$$
+  f(x)=\sum_(m=1)^(M)\alpha_m\phi(x;\mu_m,\Sigma_m)
+$$
+with mixing proportions $\alpha_m$, $\Sigma_m\apha_m=1$, and each Gaussian density has a mean $\mu_m$ and covariance matrix $\Sigma_m$. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.
 
 ## Overview
 
 1. Gaussian Mixture Model Parameters (k Components): 
   * Clustering probabilities: 
-    
     $$ 𝜋=(𝜋_1,⋯𝜋_k) $$
-    
   * Cluster means: 
-    * 𝜇=(𝜇1,⋯,𝜇k)
+    $$ 𝜇=(𝜇_1,⋯,𝜇_k) $$
   * Cluster covariance matrices: 
-    * Σ=(Σ1,⋯,Σk)
+    $$ Σ=(Σ_1,⋯,Σ_k) $$
  
 2. Joint Distribution: 
 
-  * p(x,z)=p(z)p(x∣∣z)=𝜋z𝒩(x∣∣𝜇z,Σz).
+  $$ p(x,z)=p(z)p(x∣z)=𝜋_z𝒩(x∣𝜇_z,Σ_z) $$
  
-  * Notes: 
-    * x|z has distribution 𝒩(𝜇z,Σz). z corresponds to (x is the true cluster assignment). 
-    * Suppose we know the model parameters 𝜋z,𝜇z,Σz, then it is easy to evaluate the join density p(x,z). 
+  Notes: 
+  * $x|z$ has distribution $𝒩(𝜇_z,Σ_z)$. $z$ corresponds to (x is the true cluster assignment). 
+  * Suppose we know the model parameters $𝜋_z$,$𝜇_z$,$Σ_z$, then it is easy to evaluate the join density p(x,z). 
 
-Latent Variable Model: 
+3. Latent Variable Model: 
 
 [Definition] A latent variable model is a probability model for which certain variables are never observed. 
 
 Example: 
 
-In the Gaussian mixture model, we don't observe 
-z
- (the cluster assignment). Therefore 
-z
- is a latent variable, or a hidden variable. 
+In the Gaussian mixture model, we don't observe z (the cluster assignment). Therefore z is a latent variable, or a hidden variable. 
 
-The GMM "Inference" Problem: 
+## The GMM "Inference" Problem
 
 Suppose we observe 
 x
