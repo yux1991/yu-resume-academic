@@ -199,13 +199,15 @@ $$
 
   $$
     \hat{\mu}_z=1/n_z
-    \Sigma_{i:z_i=z}x_i.
   $$
+  
+  $$\times\Sigma_{i:z_i=z}x_i.$$
 
   $$
     \hat{\Sigma}_z=1/n_z
-    \Sigma_{i:z_i=z}(x_i−\hat{\mu}_z)(x_i−\hat{\mu}_z)^T.
   $$
+  
+  $$\times\Sigma_{i:z_i=z}(x_i−\hat{\mu}_z)(x_i−\hat{\mu}_z)^T.$$
 
 * Cluster Responsibilities: 
   * Denote the probability that observed value $xi$ comes from cluster $j$ by: 
