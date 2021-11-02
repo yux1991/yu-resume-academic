@@ -34,7 +34,7 @@ experience:
         
         * Held meetings with the customers to understand the business scope, establish project timeline, present the updates, and reach agreement on the final deliveries.
         * Performed exploratory data analysis and feature engineering to remove outliers, impute missing data and characterize the stationarity/correlation of the raw data.
-        * Designed the most suitable forecasting models based on the characteristics of the data and business scope, and then tuned the model hyper-parameters to achieve the optimal performance.
+        * Build the multivariate encoder-decoder attention model with two-head outputs that overcomes the conventional methods’limitations in long-term forecasting and sparse inputs.
         * Deployed the models on native Amazon web service (NAWS) and provided launch support to the customers.
         
   - title: Seismic Imager
