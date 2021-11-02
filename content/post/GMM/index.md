@@ -187,7 +187,7 @@ $$
 ### The EM Algorithm for GMM: 
 
 * Estimating a Fully-Observed GMM: 
-  * Suppose we observe $(x_1,z_1),⋯,(x_n,z_n)$ i.i.d. from GMM $p(x,z)$. Then find MLE is easy: 
+  * Suppose we observe $(x_1,z_1),⋯(x_n,z_n)$ i.i.d. from GMM $p(x,z)$. Then find MLE is easy: 
 
   $$
     n_z=∑_i^n=1(z_i=z).
@@ -198,11 +198,11 @@ $$
   $$
   
   $$
-    \hat{𝜇}_z=1/n_z∑_{i with z_i=z} x_i.
+    \hat{𝜇}_z=1/n_z∑_{i:z_i=z} x_i.
   $$
 
   $$
-    \hat{Σ}_z=1/n_z∑_{i with z_i=z} (x_i−\hat{𝜇}_z)(x_i−\hat{𝜇}_z)^T.
+    \hat{Σ}_z=1/n_z∑_{i:z_i=z} (x_i−\hat{𝜇}_z)(x_i−\hat{𝜇}_z)^T.
   $$
 
 * Cluster Responsibilities: 
