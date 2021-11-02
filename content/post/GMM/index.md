@@ -198,11 +198,11 @@ $$
   $$
 
   $$
-    \hat{\mu}_z=1/n_z\Sigma_{z_i=z} x_i.
+    \hat{\mu}_z=\frac{1}{n_z}∑_{z_i=z} x_i.
   $$
 
   $$
-    \hat{\Sigma}_z=1/n_z\Sigma_{z_i=z} (x_i−\hat{\mu}_z)(x_i−\hat{\mu}_z)^T.
+    \hat{\Sigma}_z=\frac{1}{n_z}∑_{z_i=z} (x_i−\hat{\mu}_z)(x_i−\hat{\mu}_z)^T.
   $$
 
 * Cluster Responsibilities: 
