@@ -62,25 +62,22 @@ Such an estimate is called the **least squares estimate**.
 
 ### Simple Linear Regression
 
-* Formula: 
+* Formula 
+
 $$
   E
   \begin{pmatrix}
     \begin{pmatrix}
-      Y_1\\
-      \vdots \\
-      Y_n
-    \end{pmatrix}
+      Y_1,\cdots, Y_n
+    \end{pmatrix}^T
   |X_1=x_1, \cdots, X_n=x_n
   \end{pmatrix}
 $$
 $$
   =
   \begin{pmatrix}
-    \beta_1+\beta_2x_1 \\
-    \vdots \\
-    \beta_1+\beta_2x_n 
-  \end{pmatrix}
+    \beta_1+\beta_2x_1, \cdots, \beta_1+\beta_2x_n 
+  \end{pmatrix}^T
 $$
 
 * LS estimates: 
@@ -147,7 +144,7 @@ $$
 
 * Matrix form: 
 $$
-  𝐲=𝐗\mathbf{\beta}+\mathbf{\epsilon}.
+  𝐲=𝐗\bf{\beta}+\bf{\epsilon}.
 $$
 
 Where: 
@@ -155,66 +152,54 @@ Where:
 $$
   𝐲=
     \begin{pmatrix}
-      y_1 \\
-      y_2 \\
-      \vdots \\
-      y_n
+      y_1, y_2, \cdots, y_n
     \end{pmatrix}
-  _{n\times1}, 
+  _{n\times1}^T, 
 $$
 $$
   𝐗=
     \begin{pmatrix}
-      1 & x_{11} & x_{12} & \cdots & x_{1d} \\
-      1 & x_{21} & x_{22} & \cdots & x_{2d} \\
-      \vdots & \vdots & \vdots & \ddots & \vdots \\
-      1 & x_{n1} & x_{n2} & \cdots & x_{nd} \\
+      1, \bf{x}_{1:n\>1}, \bf{x}_{1:n\>2}, \cdots, \bf{x}_{1:n\>d} 
     \end{pmatrix}
   _{n\times d},
 $$
 $$
-  \mathbf{\beta}=
+  \bf{\beta}=
     \begin{pmatrix}
-      \beta_1 \\
-      \beta_2 \\
-      \vdots \\
-      \beta_d
+      \beta_1, \beta_2, \cdots, \beta_d
     \end{pmatrix}
-  _{d\times1}, 
+  _{d\times1}^T, 
 $$
 $$
-  \mathbf{\epsilon}=
+  \bf{\epsilon}=
     \begin{pmatrix}
-      \epsilon_1 \\
-      \epsilon_2 \\
-      \vdots \\
-      \epsilon_n
+      \epsilon_1, \epsilon_2, \cdots, \epsilon_n
     \end{pmatrix}
-  _{n\times1} .
+  _{n\times1}^T.
 $$ 
 
 * The overdetermined system (n≥d) usually has no exact solution. Then OLS solution is found out by solving the quadratic minimizing problem: 
 $$
-  \hat{\mathbf{\beta}}=\argmin_{\mathbf{\beta}∈ℝ^d}S(\mathbf{\beta})
+  \hat{\bf{\beta}}=argmin_{\bf{\beta}∈ℝ^d}S(\bf{\beta})
 $$
 
 Where: 
 $$
-  \hat{\mathbf{\epsilon}}=𝐲−\hat{\mathbf{\beta}}𝐗.
+  \hat{\bf{\epsilon}}=𝐲−\hat{\bf{\beta}}𝐗.
 $$ 
 $$
-  S(\mathbf{\beta})=\hat{\mathbf{\epsilon}}^T\hat{\mathbf{\epsilon}}
+  S(\bf{\beta})=\hat{\bf{\epsilon}}^T\hat{\bf{\epsilon}}
 $$
 $$
-  =∑_{i=1}^n∣y_i−∑_{j=1}^dx_{ij}\beta_j∣^2=‖𝐲−\mathbf{\beta}𝐗‖^2
+  =∑_{i=1}^n∣y_i−∑_{j=1}^dx_{ij}\beta_j∣^2=‖𝐲−\bf{\beta}𝐗‖^2
 $$
 $$
-=(𝐲−\mathbf{\beta}𝐗)^T(𝐲−𝐗\mathbf{\beta}).
+=(𝐲−\bf{\beta}𝐗)^T(𝐲−𝐗\bf{\beta}).
 $$ 
 
 Provided that the d columns are linearly independent, the minimization has a unique solution: 
 $$
-  \hat{\mathbf{\beta}}=(𝐗^T𝐗)^{−1}𝐗^T𝐲.
+  \hat{\bf{\beta}}=(𝐗^T𝐗)^{−1}𝐗^T𝐲.
 $$ 
 
 * OLS time complexity: 
@@ -225,7 +210,7 @@ $$
 * Some terminologies: 
   * Normal equation: 
 $$
-  (𝐗^T𝐗)\hat{\mathbf{\beta}}=𝐗^T𝐲.
+  (𝐗^T𝐗)\hat{\bf{\beta}}=𝐗^T𝐲.
 $$ 
 
   * Normal matrix: 
@@ -235,7 +220,7 @@ $$
 
   * The predicted values: 
 $$
-  \hat{\mathbf{y}}=𝐗\hat{\mathbf{\beta}}=𝐗(𝐗^T𝐗)^{−1}𝐗^T𝐲=𝐏𝐲.
+  \hat{\bf{y}}=𝐗\hat{\bf{\beta}}=𝐗(𝐗^T𝐗)^{−1}𝐗^T𝐲=𝐏𝐲.
 $$ 
 
   * The projection matrix: 
@@ -263,11 +248,11 @@ $$
 =1−\frac{𝐲^T𝐌𝐲}{𝐲^T𝐂𝐲}=1−\frac{RSS}{TSS}.
 $$
 
-  * $𝐗^T\hat{\mathbf{\epsilon}}=0$.
+  * $𝐗^T\hat{\bf{\epsilon}}=0$.
 
   * Definitions:
 $$
-  RSS=∑_{i=1}^n(y_i−\hat{y})^2=𝐲^T𝐌𝐲=\hat{\mathbf{\epsilon}}^T\hat{\mathbf{\epsilon}}.
+  RSS=∑_{i=1}^n(y_i−\hat{y})^2=𝐲^T𝐌𝐲=\hat{\bf{\epsilon}}^T\hat{\bf{\epsilon}}.
 $$ 
 $$
   ESS=∑_{i=1}^n(\hat{y}_i−\bar{y})^2=𝐲^T𝐏^T𝐋𝐏𝐲.
