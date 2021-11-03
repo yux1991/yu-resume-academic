@@ -65,19 +65,10 @@ Such an estimate is called the **least squares estimate**.
 * Formula 
 
 $$
-  E
-  \begin{pmatrix}
-    \begin{pmatrix}
-      Y_1,\cdots, Y_n
-    \end{pmatrix}^T
-  |X_1=x_1, \cdots, X_n=x_n
-  \end{pmatrix}
+  E((Y_1,\cdots,Y_n)|X_1=x_1, \cdots, X_n=x_n)
 $$
 $$
-  =
-  \begin{pmatrix}
-    \beta_1+\beta_2x_1, \cdots, \beta_1+\beta_2x_n 
-  \end{pmatrix}^T
+  =(\beta_1+\beta_2x_1, \cdots, \beta_1+\beta_2x_n )^T
 $$
 
 * LS estimates: 
@@ -150,32 +141,16 @@ $$
 Where: 
 
 $$
-  𝐲=
-    \begin{pmatrix}
-      y_1, y_2, \cdots, y_n
-    \end{pmatrix}
-  _{n\times1}^T, 
+  𝐲=(y_1, y_2, \cdots, y_n)_{n\times1}^T, 
 $$
 $$
-  𝐗=
-    \begin{pmatrix}
-      1, \bf{x}_{1:n\>1}, \bf{x}_{1:n\>2}, \cdots, \bf{x}_{1:n\>d} 
-    \end{pmatrix}
-  _{n\times d},
+  𝐗=(1, \bf{x}_{1:n\>1}, \bf{x}_{1:n\>2}, \cdots, \bf{x}_{1:n\>d})_{n\times d},
 $$
 $$
-  \bf{\beta}=
-    \begin{pmatrix}
-      \beta_1, \beta_2, \cdots, \beta_d
-    \end{pmatrix}
-  _{d\times1}^T, 
+  \bf{\beta}=(\beta_1, \beta_2, \cdots, \beta_d)_{d\times1}^T, 
 $$
 $$
-  \bf{\epsilon}=
-    \begin{pmatrix}
-      \epsilon_1, \epsilon_2, \cdots, \epsilon_n
-    \end{pmatrix}
-  _{n\times1}^T.
+  \bf{\epsilon}=(\epsilon_1, \epsilon_2, \cdots, \epsilon_n)_{n\times1}^T.
 $$ 
 
 * The overdetermined system (n≥d) usually has no exact solution. Then OLS solution is found out by solving the quadratic minimizing problem: 
