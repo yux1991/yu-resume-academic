@@ -5,22 +5,22 @@ name = "My_theme"
 is_light = false
 
 # Primary
-primary = "rgb(235, 0, 60)"
+primary = "rgb(235, 0, 80)"
 
 # Menu
 menu_primary = "#fcee0a"
 menu_text = "#000"
-menu_text_active = "rgb(235, 0, 60)"
+menu_text_active = "rgb(235, 0, 80)"
 menu_title = "#000"
 
 [dark]
   # Menu
-  menu_primary = "#323232"
+  menu_primary = "#1e1e1e"
   menu_text = "#1dcccb"
-  menu_text_active = "rgb(235, 0, 60)"
+  menu_text_active = "rgb(235, 0, 80)"
   menu_title = "#1dcccb"
 
   # Backgrounds
-  background = "#323232"
-  home_section_odd = "#323232"
-  home_section_even = "#404040"
+  background = "#1e1e1e"
+  home_section_odd = "#1e1e1e"
+  home_section_even = "#282828"
