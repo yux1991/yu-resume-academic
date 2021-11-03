@@ -145,7 +145,7 @@ $$
 $$
 
 $$
-  𝐗=(1, \bf{x}_{1}, \bf{x}_{2}, \cdots, \bf{x}_{d})_{n\times d},
+  𝐗=(1, \bf{x}_{1}, \bf{x}_{2}, \cdots, \bf{x}_{d})_{n\times\bf{d}},
 $$
 
 $$
