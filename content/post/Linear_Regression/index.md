@@ -141,16 +141,19 @@ $$
 Where: 
 
 $$
-  𝐲=(y_1, y_2, \cdots, y_n)_{nx1}^T, 
+  𝐲=(y_1, y_2, \cdots, y_n)_{n\times1}^T, 
 $$
+
 $$
-  𝐗=(1, \bf{x}_{1:n\>1}, \bf{x}_{1:n\>2}, \cdots, \bf{x}_{1:n\>d})_{nxd},
+  𝐗=(1, \bf{x}_{1:n\>1}, \bf{x}_{1:n\>2}, \cdots, \bf{x}_{1:n\>d})_{n\times d},
 $$
+
 $$
-  \bf{\beta}=(\beta_1, \beta_2, \cdots, \beta_d)_{dx1}^T, 
+  \bf{\beta}=(\beta_1, \beta_2, \cdots, \beta_d)_{d\times1}^T, 
 $$
+
 $$
-  \bf{\epsilon}=(\epsilon_1, \epsilon_2, \cdots, \epsilon_n)_{nx1}^T.
+  \bf{\epsilon}=(\epsilon_1, \epsilon_2, \cdots, \epsilon_n)_{n\times1}^T.
 $$ 
 
 * The overdetermined system (n≥d) usually has no exact solution. Then OLS solution is found out by solving the quadratic minimizing problem: 
