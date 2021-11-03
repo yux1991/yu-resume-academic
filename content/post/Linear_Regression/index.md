@@ -149,11 +149,11 @@ $$
 $$
 
 $$
-  \bf{\beta}=(\beta_1, \beta_2, \cdots, \beta_d)_{d\times1}^T, 
+  \beta=(\beta_1, \beta_2, \cdots, \beta_d)_{d\times1}^T, 
 $$
 
 $$
-  \bf{\epsilon}=(\epsilon_1, \epsilon_2, \cdots, \epsilon_n)_{n\times1}^T.
+  \epsilon=(\epsilon_1, \epsilon_2, \cdots, \epsilon_n)_{n\times1}^T.
 $$ 
 
 * The overdetermined system (n≥d) usually has no exact solution. Then OLS solution is found out by solving the quadratic minimizing problem: 
