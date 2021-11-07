@@ -85,7 +85,7 @@ $$
 
 * A hard assignment is: 
 $$
-  z^∗=argmax_{z∈\{1,⋯,k\}}p(z∣x).
+  z^∗=\underset{z∈\{1,⋯,k\}}{\operatorname{argmax}}\ p(z∣x).
 $$
 
 * If we have the model, the inference is trivial. 
