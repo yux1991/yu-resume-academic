@@ -118,7 +118,7 @@ $$
   * Cross-entropy loss function
 
   $$
-    J(\mathbf{\theta})=-\mathbb{E}_{\mathbf(x,y)\sim\hat{p}_{data}}\log p_{model}(\mathbf{y}|\mathbf{x})
+    J(\theta)=-\mathbb{E}_{\mathbf(x,y)\sim\hat{p}_{data}}\log p_{model}(\mathbf{y}|\mathbf{x})
   $$
 
   * The specific form depends on the distribution.
@@ -132,7 +132,7 @@ $$
 * Sometimes rather than predicting a complete probability distribution over $\mathbf{y}$, we merely predict some statistic of $\mathbf{y}$ conditioned on $\mathbf{x}$. Specialized loss functions enable us to train a predictor of these estimates. 
   * Solving the optimization problem with the **mean squared error** (MSE):
   $$
-    f^*=\argmin_{f}\mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel^2
+    f^*=\underset{f}{\operatorname{argmin}}\ \mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel^2
   $$
   yields
   $$
@@ -140,7 +140,7 @@ $$
   $$
   * Solving the optimization problem:
   $$
-    f^*=\argmin_{f}\mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel_1
+    f^*=\underset{f}{\operatorname{argmin}}\ \mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel_1
   $$
   yields a function that predicts the *median* value of $\mathbf{y}$ for each $\mathbf{x}$. This cost function is commonly called **mean absolute error** (MAE).
 
