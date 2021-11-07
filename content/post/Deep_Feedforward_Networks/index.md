@@ -116,8 +116,9 @@ $$
 * In most cases, our parametric model deﬁnes a distribution $p(\mathbf{y | x};\mathbf{\theta})$ and we simply use the principle of maximum likelihood. This means we use the **cross-entropy** between the training data and the model’s predictions as the costfunction.
 
   * Cross-entropy loss function
+
   $$
-    J(\theta)=-\mathbb{E}_{\mathbf(x,y)\sim\hat{p}_{data}}\log p_{model}(\mathbf{y}|\mathbf{x})
+    J(\mathbf{\theta})=-\mathbb{E}_{\mathbf(x,y)\sim\hat{p}_{data}}\log p_{model}(\mathbf{y}\vert\mathbf{x})
   $$
 
   * The specific form depends on the distribution.
@@ -135,7 +136,6 @@ $$
   $$
 
   yields
-
   $$
     f^*(\mathbf{x})=\mathbb{E}_{\mathbf{x,y}\sim p_{data}(\mathbf{y}|\mathbf{x})}[\mathbf{y}]
   $$
@@ -144,6 +144,7 @@ $$
   $$
     f^*=\underset{f}{\operatorname{argmin}}\ \mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel_1
   $$
+
   yields a function that predicts the *median* value of $\mathbf{y}$ for each $\mathbf{x}$. This cost function is commonly called **mean absolute error** (MAE).
 
 * The total cost function used to train a neural network will often combine one of the primary cost functions with a regularization term.
