@@ -115,7 +115,7 @@ $$
 
 * In most cases, our parametric model deﬁnes a distribution $p(\mathbf{y | x};\mathbf{\theta})$ and we simply use the principle of maximum likelihood. This means we use the **cross-entropy** between the training data and the model’s predictions as the costfunction.
 
-  * Then formula for the cross-entropy loss function:
+  * Then formula for the cross-entropy loss function can be expressed as the following:
     $$
     J(\mathbf{\theta})=\frac{1}{2}\mathbb{E}_{\mathbf(x,y)\sim\hat{p}_{data}} \parallel\mathbf{y}-f(\mathbf{x;\theta})\parallel^2+cost
     $$
