@@ -115,10 +115,12 @@ $$
 
 * In most cases, our parametric model deﬁnes a distribution $p(\mathbf{y | x};\mathbf{\theta})$ and we simply use the principle of maximum likelihood. This means we use the **cross-entropy** between the training data and the model’s predictions as the costfunction.
 
-  * The cross-entropy loss is <!--- $J_{m}$ --> is:
+  * The cross-entropy loss is:
+
     $$
     J(\mathbf{\theta})=-\mathbb{E}_{\mathbf{x,y}\sim\hat{p}_{data}}\log p_{model}(\mathbf{y}\vert\mathbf{x})
     $$
+
   * The specific form depends on the distribution.
   * If $p_{model}(\mathbf{y}|\mathbf{x})=\mathcal{N}(\mathbf{y};f(\mathbf{x;\theta}),I)$, then we can recover the MSE cost:
     $$
