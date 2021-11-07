@@ -1,18 +1,18 @@
 ---
-title: Review - Linear Regression
-subtitle: A review of the linear regression.
+title: Learning - Deep Feedforward Networks
+subtitle: Learning materials for the deep feedforward networks.
 
 # Summary for listings and search engines
-summary: This article summarizes the key points of linear regression including assumption, formulization and the model performance.
+summary: This article summarizes the key points of deep feedforward networks.
 
 # Link this post with a project
 projects: []
 
 # Date published
-date: "2021-11-02T00:00:00Z"
+date: "2021-11-05T00:00:00Z"
 
 # Date updated
-lastmod: "2020-12-13T00:00:00Z"
+lastmod: "2021-11-05T00:00:00Z"
 
 # Is this an unpublished draft?
 draft: false
@@ -21,9 +21,8 @@ draft: false
 featured: false
 
 # Featured image
-# Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Image credit: [**Scikit-learn**](https://scikit-learn.org/stable/auto_examples/linear_model/plot_nnls.html#sphx-glr-auto-examples-linear-model-plot-nnls-py)'
+  caption: 'Image credit: [**Springer**](https://link.springer.com/chapter/10.1007%2F978-3-319-69775-8_2)'
   focal_point: ""
   placement: 2
   preview_only: false
@@ -32,212 +31,193 @@ authors:
 - admin
 
 tags:
-- Machine Learning
+- Deep Learning
 
 
 categories:
-- Review
+- Learning
 
 ---
 ### Introduction
 
-#### What is the assumption of linear regression?
+#### What is the deep feedforward networks?
 
-* Assumption: as we change $X$, the only thing that can possibly change about the conditional distribution of $Y$ given $(X_1, . . . , X_k)$, is the conditional mean $E(Y∣X_1, . . . , X_k)$. 
+**Deep feedforward networks**, also called **feedforward neural networks**, or **multilayer perceptrons** (MLPs), are the quintessential deep learning models.The goal of a feedforward network is to approximate some function $f*$. These models are called **feedforward** because there are no **feedback** connections.
 
-* General form of the regression model: General form of the regression model:
-$$
-  Y=E(Y∣X_1,⋯,X_k)+Z.
-$$ 
+#### What are the components of a deep feedforward network?
 
-#### Least-square principle
-
-* Suppose we have a random variable $Y$, and we want to estimate $E(Y)$ based on a sample $(y_1, . . . , y_n)$. The least-squares principle says that we select the point $t(y_1, . . . , y_n)$, in the set of possible values for $E(Y)$, that minimizes the sum of squared  deviations (hence, “least squares”) given by 
+A general form of a deep feedforward network can be represented by:
 
 $$
-  ∑_{i=1}^n(y_i−t(y_1,⋯,y_n))^2. 
+  f(\textbf{x}) = f^{(n)}(f^{(n-1)}(\cdots(f^{(2)}(f^{(1)}(\textbf{x})))))
 $$
 
-Such an estimate is called the **least squares estimate**. 
+* n-th Layer: $f^{(n)}$
+* Output Layer: the final layer of a feedforward network
+* Hidden Layers: The training examples specify directly what the output layer must do at each point $x$; it must produce a value that is close to $y$. The behavior of the other layers is not directly speciﬁed by the training data. Therefore the other layers are called **hidden layers**.
+* Width: the dimensionality of the hidden layers.
 
-### Simple Linear Regression
+#### How to understand the deep feedforward networks?
 
-* Formula 
+It is best to think of feedforward networks as **function approximation machines** that are designed to achieve statistical generalization, occasionally drawing some insights from what we know about the brain, rather than as models of brain function.
 
-$$
-  E((Y_1,\cdots,Y_n)|X_1=x_1, \cdots, X_n=x_n)
-$$
-$$
-  =(\beta_1+\beta_2x_1, \cdots, \beta_1+\beta_2x_n )^T
-$$
+#### Nonlinear mapping 
 
-* LS estimates: 
-  * $\beta_1=\bar{y}−\beta_2\bar{x}$.
-  * $\beta_2=\frac{∑_{i=1}^n(x_i−\bar{x})(y_i−\bar{y})}{∑_{i=1}^n(x_i−\bar{x})^2}$.
- 
-* LS predictions: 
-  * $E(B_1∣X_1=x_1,⋯,X_n=x_n)=\beta_1$.
-  * $E(B_2∣X_1=x_1,⋯,X_n=x_n)=\beta_2$.
- 
-* LS standard errors: 
-  * $Var(B_1∣X_1=x_1,⋯,X_n=x_n)=\sigma^2(\frac{1}{n}+\frac{\bar{x}^2}{∑_{i=1}^n(x_i−\bar{x})^2})$.
-  * $Var(B_2∣X_1=x_1,⋯,X_n=x_n)=\frac{\sigma^2}{∑_{i=1}^n(x_i−\bar{x})^2}$.
-  * $  E(S_2∣X_1=x_1,⋯,X_n=x_n)=\sigma^2$, while: 
+Feedforward networks can also be thought of as an extention to the linear models by applying a nonlinear mapping $\phi$ to the input $\textbf{x}$. Instead of using a very generic $\phi$ (e.g. RBF kernel) or manual engineering, the strategy of deep learning is to learn $\phi$:
 $$
-  s=\frac{1}{n−2}∑_{i=1}^n(y_i−b_1−b_2x_1)^2.
-$$ 
+  y=f(\textbf{x}; \theta,\textbf{w}) = \phi(\textbf{x}; \theta)^T\textbf{w}
+$$
+where we parameterize the representation as $\phi(\textbf{x}; \theta)$ and use the optimization algorithm to find the $\theta$ that corresponds to a good representation.
 
-* ANOVA (analysis of variance table) decomposition: 
-$$
-  ∑_{i=1}^n(y_i−\bar{y})^2=b_2^2∑_{i=1}^n(x_i−\bar{x})^2
-$$
-$$
-  +∑_{i=1}^n(y_i−b_1−b_2x_i)^2.
-$$
-  * Regression sum of squares (RSS): measuring changes in the response due to changes in the predictor. 
-$$
-  RSS=b_2^2∑_{i=1}^n(x_i−\bar{x})^2.
-$$ 
+### An Example: Learning XOR
 
-  * Error sum of squares (ESS): measuring changes in the response due to the contribution of random error. 
-$$
-  ESS=∑_{i=1}^n(y_i−b_1−b_2x_i)^2.
-$$ 
+#### Statement of the problem
 
-* F-statistics: 
+The XOR function (“exclusive or”) is an operation on two binary values, $x_1$ and $x_2$. When exactly one of these binary values is equal to 1, the XOR function returns 1. Otherwise, it returns 0. The XOR function provides the target function $y=f^*(x)$ that we want to learn. Our model provides a function $y=f(x;θ)$, and our learning algorithm will adapt the parameters $\theta$ to makef as similar as possible to $f^∗$.
+
+#### Loss function
 $$
-  F=\frac{RSS}{ESS/(n−2)}
-$$ 
-$$
-  =\frac{b_2^2∑_{i=1}^n(x_i−\bar{x})^2}{s^2}∼F(1,n−2).
+  J(\mathbf{\theta}) = \frac{1}{4}\sum_{x\in\mathbb{X}}(f^*\mathbf(x) - f(\mathbf(x);\mathbf{\theta})^2)
 $$
 
-  * If $H_0: \beta_2=0$ is true, then $F=1$, which indicates no relationship between response and predictor. 
-  * If $F≫1$, we should reject $H_0$. 
+In practice, MSE is usually not an appropriate cost function for modeling binary data.
 
-* ANOVA test or F-test: 
-  * Null hypothesis $H_0:\beta_2=0$. 
-  * P value: 
+#### How the feedforward network work?
+
+The network contains two functions chained together:
 $$
-  P(F≥\frac{b_2^2∑_{i=1}^n(x_i−\bar{x})^2}{s^2}).
-$$ 
-
-* The Coefficient of Determination: 
-  * [Definition] The proportion of the observed variation in the response explained by changes in the predictor: 
+  \mathbf{h}=f^{(1)}(\mathbf{x;W,c})
 $$
-  R^2=\frac{b_2^2∑_{i=1}^n(x_i−\bar{x})^2}{∑_{i=1}^n(y_i−\bar{y})^2}.
-$$ 
-
-  * $R^2$ near 1: highly accurate predictions. 
-  * $R^2$ near 0: not accurate. 
-
-### General Linear Regression: 
-
-* Matrix form: 
+and
 $$
-  𝐲=𝐗\bf{\beta}+\bf{\epsilon}.
+  y=f^{(2)}(\mathbf{h;w},b)
+$$
+with the complete model being:
+$$
+f(\mathbf{x;W,c;w},b)=f^{(2)}(f^{(1)}(\mathbf{x}))
 $$
 
-Where: 
+#### How to choose $f^{(1)}$?
+$f^{(1)}$ cannot be a linear function, otherwise it becomes a linear model. Most neuralnetworks uses an aﬃne transformation controlled by learned parameters,followed by a ﬁxed nonlinear function called an activation function $g$:
+$$
+  \mathbf{h}=g(\mathbf{W}^T\mathbf{x}+\mathbf{c})
+$$
+where $W$ provides the weights of a linear transformation and $c$ the biases.
 
+In modern neural networks,the default recommendation is to use the rectiﬁed linear unit, or ReLU [^1], deﬁned by the activation function
 $$
-  𝐲=(y_1, y_2, \cdots, y_n)_{n\times1}^T, 
-$$
-
-$$
-  𝐗=(1, X_{1}, X_{2}, \cdots, X_{d})_{n\times d},
-$$
-
-$$
-  \beta=(\beta_1, \beta_2, \cdots, \beta_d)_{d\times1}^T, 
+  g(z) = max\{0, z\}
 $$
 
-$$
-  \epsilon=(\epsilon_1, \epsilon_2, \cdots, \epsilon_n)_{n\times1}^T.
-$$ 
+### Gradient-Based Learning
 
-* The overdetermined system (n≥d) usually has no exact solution. Then OLS solution is found out by solving the quadratic minimizing problem: 
-$$
-  \hat{\bf{\beta}}=argmin_{\bf{\beta}∈ℝ^d}S(\bf{\beta})
-$$
+#### Cost Functions
 
-Where: 
-$$
-  \hat{\bf{\epsilon}}=𝐲−\hat{\bf{\beta}}𝐗.
-$$ 
-$$
-  S(\bf{\beta})=\hat{\bf{\epsilon}}^T\hat{\bf{\epsilon}}
-$$
-$$
-  =∑_{i=1}^n∣y_i−∑_{j=1}^dx_{ij}\beta_j∣^2=‖𝐲−\bf{\beta}𝐗‖^2
-$$
-$$
-=(𝐲−\bf{\beta}𝐗)^T(𝐲−𝐗\bf{\beta}).
-$$ 
+* In most cases, our parametric model deﬁnes a distribution $p(\mathbf{y | x};\mathbf{\theta})$ and we simply use the principle of maximum likelihood. This means we use the **cross-entropy** between the training data and the model’s predictions as the costfunction.
 
-Provided that the d columns are linearly independent, the minimization has a unique solution: 
-$$
-  \hat{\bf{\beta}}=(𝐗^T𝐗)^{−1}𝐗^T𝐲.
-$$ 
+  * Cross-entropy loss function
 
-* OLS time complexity: 
-$$
-  O(n×d^2)
-$$ 
+  $$
+    J(\mathbf{\theta})=-\mathbb{E}_{\mathbf(x,y)\sim\hat{p}_{data}}\log p_{model}(\mathbf{y}|\mathbf{x})
+  $$
 
-* Some terminologies: 
-  * Normal equation: 
-$$
-  (𝐗^T𝐗)\hat{\bf{\beta}}=𝐗^T𝐲.
-$$ 
+  * The specific form depends on the distribution.
+  * If $p_{model}(\mathbf{y}|\mathbf{x})=\mathcal{N}(\mathbf{y};f(\mathbf{x;\theta}),I)$, then we can recover the MSE cost:
+    $$
+    J(\mathbf{\theta})=\frac{1}{2}\mathbb{E}_{\mathbf(x,y)\sim\hat{p}_{data}} \parallel\mathbf{y}-f(\mathbf{x;\theta})\parallel^2+cost
+    $$
+  * Advantage: specifying a model $p(\mathbf{y | x};\mathbf{\theta})$ automatically determines a cost function $\log p_{model}(\mathbf{y}|\mathbf{x})$.
+  * Disadvantage: usually no minimum value.
 
-  * Normal matrix: 
-$$
-  𝐗^T𝐗.
-$$ 
+* Sometimes rather than predicting a complete probability distribution over $\mathbf{y}$, we merely predict some statistic of $\mathbf{y}$ conditioned on $\mathbf{x}$. Specialized loss functions enable us to train a predictor of these estimates. 
+  * Solving the optimization problem with the **mean squared error** (MSE):
+  $$
+    f^*=\argmin_{f}\mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel^2
+  $$
+  yields
+  $$
+    f^*(\mathbf{x})=\mathbb{E}_{\mathbf{x,y}\sim p_{data}(\mathbf{y}|\mathbf{x})}[\mathbf{y}]
+  $$
+  * Solving the optimization problem:
+  $$
+    f^*=\argmin_{f}\mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel_1
+  $$
+  yields a function that predicts the *median* value of $\mathbf{y}$ for each $\mathbf{x}$. This cost function is commonly called **mean absolute error** (MAE).
 
-  * The predicted values: 
-$$
-  \hat{\bf{y}}=𝐗\hat{\bf{\beta}}=𝐗(𝐗^T𝐗)^{−1}𝐗^T𝐲=𝐏𝐲.
-$$ 
+* The total cost function used to train a neural network will often combine one of the primary cost functions with a regularization term.
 
-  * The projection matrix: 
-$$
-  𝐏=𝐗(𝐗^T𝐗)^{−1}𝐗^T.
-$$ 
+#### Output Units
 
-  * The annihilator matrix: 
-$$
-  𝐌=𝐈_n−𝐏.
-$$ 
+* Suppose that the feedforward network provides a set of hidden features deﬁned by $h=f(x;θ)$.
+* The role of the output layer: provide some additional transformation from the features to complete the task.
+* Linear Units
+  * Formula:
+  $$
+    \mathbf{\hat{y}}=\mathbf{W^Th}+\mathbf{b}
+  $$
+  * Linear output layers are often used to produce the mean of a conditional Gaussian distribution:
+  $$
+    p(\mathbf{y}|\mathbf{x})=\mathcal{N}(\mathbf{y;\hat{y},I})
+  $$
+  Maximizing this log-likelihood $\log{p(\mathbf{y}|\mathbf{x})}$ is then equivalent to minimizing the MSE. 
+  * For the linear unit, the covariance of the Gaussian is straightforward to learn, but the covariance must be constrained to be a positive definite matrix for all input.
 
-  * The "centering" matrix: 
-$$
-  𝐂=𝐈_n−\frac{1}{n}𝐉_n,
-$$
-where $𝐉_n$ is an n-by-n matrix of all $1$'s. 
+* Sigmoid Units
+  * Formula:
+  $$
+    \hat{y}=\sigma(w^T\mathbf{h}+b)
+  $$
 
-* Properties: 
-  * Coefficient of determination: 
-$$
-  R^2=\frac{b_2^2∑_{i=1}^n(x_i−\bar{x})^2}{∑_{i=1}^n(y_i−\bar{y})^2}
-$$ 
-$$
-=1−\frac{𝐲^T𝐌𝐲}{𝐲^T𝐂𝐲}=1−\frac{RSS}{TSS}.
-$$
+    where $\sigma$ is the logistic sigmoid function:
 
-  * $𝐗^T\hat{\bf{\epsilon}}=0$.
+  $$
+    \sigma(x)=\frac{1}{1+\exp{(-x)}}
+  $$
 
-  * Definitions:
-$$
-  RSS=∑_{i=1}^n(y_i−\hat{y})^2=𝐲^T𝐌𝐲=\hat{\bf{\epsilon}}^T\hat{\bf{\epsilon}}.
-$$ 
-$$
-  ESS=∑_{i=1}^n(\hat{y}_i−\bar{y})^2=𝐲^T𝐏^T𝐋𝐏𝐲.
-$$ 
-$$
-  TSS=∑_{i=1}^n(y_i−\bar{y})^2=𝐲^T𝐂𝐲.
-$$ 
-$$
-  TSS=RSS+ESS.
-$$ 
+{{< figure src="sigmoid.png" caption="Figure 1. The Sigmoid function" theme="light" >}}
+
+  * Benefit of the Sigmoid function:
+    * There is always a strong gradient whenever the model has the wrong answer.
+  * Two components:
+    * The **logit**:
+    $$
+      z=w^T\mathbf{h}+b
+    $$
+    * sigmoid activation function to conver $z$ into a probability.
+  * Assume that the unnormalized log probabilies $\tilde{P}(y)$ are linear in $y$ and $z$, then:
+    $$
+      \log{\tilde{P}(y)}=yz
+    $$
+
+    $$
+      \tilde{P}(y)=\exp{yz}
+    $$
+
+    $$
+      P(y)=\frac{\exp{(yz)}}{\sum_{y'=0}^1 \exp{(y'z)}}
+    $$
+
+    $$
+      P(y)=\sigma((2y-1)z)
+    $$
+  * The loss function for maximum likelihood learning of a Bernoulli parametrized by a sigmoid is:
+    $$
+      J(\mathbf{\theta})=-\log{P(y|x)}
+    $$
+
+    $$
+      =-\log{\sigma((2y-1)z)}
+    $$
+
+    $$
+      =\zeta((1-2y)z)
+    $$
+
+    where $\zeta$ is the **softplus** function.
+  
+  {{< figure src="softplus.png" caption="Figure 2. The Softplus function" theme="light" >}}
+
+  * Maximum likelihood is almost always the preferred approach to training sigmoid output units because when $z$ has the wrong sign, derivative of softplus function with respect to $z$ asymptotes to $sign(z)$. This is useful because the gradient-based learning can act to quickly correct a mistaken $z$.
+
+
+[^1]: [Nair V, Hinton GE. Rectified linear units improve restricted boltzmann machines. InIcml 2010 Jan 1.](https://icml.cc/Conferences/2010/papers/432.pdf)
