@@ -1,5 +1,5 @@
 ---
-title: Review - Gaussian Mixture Model
+title: Gaussian Mixture Model
 subtitle: A review of the Gaussian Mixture Model (GMM) and the Expectation–Maximization (EM) algorithm.
 
 # Summary for listings and search engines

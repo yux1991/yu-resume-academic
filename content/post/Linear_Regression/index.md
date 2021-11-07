@@ -1,5 +1,5 @@
 ---
-title: Review - Linear Regression
+title: Linear Regression
 subtitle: A review of the linear regression.
 
 # Summary for listings and search engines
@@ -158,7 +158,7 @@ $$
 
 * The overdetermined system (n≥d) usually has no exact solution. Then OLS solution is found out by solving the quadratic minimizing problem: 
 $$
-  \hat{\bf{\beta}}=argmin_{\bf{\beta}∈ℝ^d}S(\bf{\beta})
+  \hat{\bf{\beta}}=\underset{{\bf{\beta}∈ℝ^d}}{\operatorname{argmin}}\ S(\bf{\beta})
 $$
 
 Where: 
