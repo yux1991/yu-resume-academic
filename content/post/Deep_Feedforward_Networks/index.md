@@ -116,7 +116,6 @@ $$
 * In most cases, our parametric model deﬁnes a distribution $p(\mathbf{y | x};\mathbf{\theta})$ and we simply use the principle of maximum likelihood. This means we use the **cross-entropy** between the training data and the model’s predictions as the costfunction.
 
   * Cross-entropy loss function
-
   $$
     J(\theta)=-\mathbb{E}_{\mathbf(x,y)\sim\hat{p}_{data}}\log p_{model}(\mathbf{y}|\mathbf{x})
   $$
@@ -134,10 +133,13 @@ $$
   $$
     f^*=\underset{f}{\operatorname{argmin}}\ \mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel^2
   $$
+
   yields
+
   $$
     f^*(\mathbf{x})=\mathbb{E}_{\mathbf{x,y}\sim p_{data}(\mathbf{y}|\mathbf{x})}[\mathbf{y}]
   $$
+
   * Solving the optimization problem:
   $$
     f^*=\underset{f}{\operatorname{argmin}}\ \mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel_1
