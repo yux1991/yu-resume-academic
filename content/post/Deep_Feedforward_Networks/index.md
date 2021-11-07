@@ -131,17 +131,17 @@ $$
 * Sometimes rather than predicting a complete probability distribution over $\mathbf{y}$, we merely predict some statistic of $\mathbf{y}$ conditioned on $\mathbf{x}$. Specialized loss functions enable us to train a predictor of these estimates. 
   * Solving the optimization problem with the **mean squared error** (MSE):
   $$
-  f^*=\underset{f}{\operatorname{argmin}}\ \mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel^2
+  f^{\*}=\underset{f}{\operatorname{argmin}}\ \mathbb{E}\_{\mathbf{x,y}\sim p\_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel^2
   $$
 
   yields
   $$
-  f^*(\mathbf{x})=\mathbb{E}_{\mathbf{x,y}\sim p_{data}(\mathbf{y}|\mathbf{x})}[\mathbf{y}]
+  f^{\*}(\mathbf{x})=\mathbb{E}\_{\mathbf{x,y}\sim p\_{data}(\mathbf{y}\vert\mathbf{x})}[\mathbf{y}]
   $$
 
   * Solving the optimization problem:
   $$
-  f^*=\underset{f}{\operatorname{argmin}}\ \mathbb{E}_{\mathbf{x,y}\sim p_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel_1
+  f^{\*}=\underset{f}{\operatorname{argmin}}\ \mathbb{E}\_{\mathbf{x,y}\sim p\_{data}}\parallel\mathbf{y}-f(\mathbf{x})\parallel\_1
   $$
 
   yields a function that predicts the *median* value of $\mathbf{y}$ for each $\mathbf{x}$. This cost function is commonly called **mean absolute error** (MAE).
