@@ -117,9 +117,9 @@ $$
 
   * The cross-entropy loss is:
 
-    $$
-    J(\mathbf{\theta})=-\mathbb{E}_{\mathbf{x,y}\sim\hat{p}_{data}}\log{p_{model}(\mathbf{y}\vert\mathbf{x})}
-    $$
+  $$
+  J(\mathbf{\theta})=-\mathbb{E}_{\mathbf{x,y}\sim\hat{p}_{data}}\log{p_{model}(\mathbf{y}\vert\mathbf{x})}
+  $$
 
   * The specific form depends on the distribution.
   * If $p_{model}(\mathbf{y}|\mathbf{x})=\mathcal{N}(\mathbf{y};f(\mathbf{x;\theta}),I)$, then we can recover the MSE cost:
