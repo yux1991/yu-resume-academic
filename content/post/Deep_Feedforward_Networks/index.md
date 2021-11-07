@@ -106,7 +106,7 @@ where $W$ provides the weights of a linear transformation and $c$ the biases.
 
 In modern neural networks,the default recommendation is to use the rectiﬁed linear unit, or ReLU [^1], deﬁned by the activation function
 $$
-  g(z) = max{\{0, z\}}
+  g(z) = \operatorname{max}(0, z)
 $$
 
 ### Gradient-Based Learning
