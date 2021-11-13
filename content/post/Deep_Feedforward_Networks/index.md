@@ -42,7 +42,7 @@ categories:
 
 #### What is the deep feedforward networks?
 
-**Deep feedforward networks**, also called **feedforward neural networks**, or **multilayer perceptrons** (MLPs), are the quintessential deep learning models.The goal of a feedforward network is to approximate some function $f*$. These models are called **feedforward** because there are no **feedback** connections.
+**Deep feedforward networks**, also called **feedforward neural networks**, or **multilayer perceptrons** (MLPs), are the quintessential deep learning models.The goal of a feedforward network is to approximate some function $f*$. These models are called *feedforward* because there are no *feedback* connections.
 
 #### What are the components of a deep feedforward network?
 
