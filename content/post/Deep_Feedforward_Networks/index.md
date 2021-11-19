@@ -176,8 +176,7 @@ $$
     \sigma(x)=\frac{1}{1+\exp{(-x)}}
   $$
 
- {{< figure src="sigmoid.png" caption="Figure 1. The Sigmoid function" theme="light" >}}
- {{< chart data="Sigmoid" caption="Figure 1. The Sigmoid function">}}
+ {{< chart data="Sigmoid" >}}
 
   * Benefit of the Sigmoid function:
     * There is always a strong gradient whenever the model has the wrong answer.
@@ -218,7 +217,7 @@ $$
 
     where $\zeta$ is the **softplus** function.
   
-  {{< figure src="softplus.png" caption="Figure 2. The Softplus function" theme="light" >}}
+  {{< chart data="Softplus" >}}
 
   * Maximum likelihood is almost always the preferred approach to training sigmoid output units because when $z$ has the wrong sign, derivative of softplus function with respect to $z$ asymptotes to $sign(z)$. This is useful because the gradient-based learning can act to quickly correct a mistaken $z$.
 

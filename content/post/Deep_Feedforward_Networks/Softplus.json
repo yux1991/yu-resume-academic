@@ -500,6 +500,12 @@
         }
     ],
     "layout": {
+        "title": {
+            "font": {
+                "size": 20
+            },
+            "text": "Figure 2. The Softplus function"
+        },
         "xaxis": {
             "type": "linear",
             "range": [
@@ -507,18 +513,30 @@
                 6
             ],
             "title": {
+                "font": {
+                    "size": 18
+                },
                 "text": "X"
+            },
+            "tickfont": {
+                "size": 18
             },
             "autorange": false
         },
         "yaxis": {
             "type": "linear",
             "range": [
-                -0.14368964722222222,
+                -0.1436896472222222,
                 2.751606897222222
             ],
             "title": {
+                "font": {
+                    "size": 18
+                },
                 "text": "Y"
+            },
+            "tickfont": {
+                "size": 18
             },
             "autorange": true
         },
