@@ -176,7 +176,8 @@ $$
     \sigma(x)=\frac{1}{1+\exp{(-x)}}
   $$
 
-{{< figure src="sigmoid.png" caption="Figure 1. The Sigmoid function" theme="light" >}}
+ {{< figure src="sigmoid.png" caption="Figure 1. The Sigmoid function" theme="light" >}}
+ {{< chart data="Sigmoid" caption="Figure 1. The Sigmoid function">}}
 
   * Benefit of the Sigmoid function:
     * There is always a strong gradient whenever the model has the wrong answer.
