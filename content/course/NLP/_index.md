@@ -14,4 +14,4 @@ type: page
 
 ---
 
-[Return to course list]({{< relref "../" >}}) 
+[{{< icon name="arrow-left" pack="fas" >}} Return to the course list]({{< relref "../" >}}) 
