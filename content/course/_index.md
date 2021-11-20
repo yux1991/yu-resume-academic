@@ -7,4 +7,4 @@ header:
   image: ""
 ---
 
-My course notes!
+Here's a list of Yu's course notes.

@@ -5,7 +5,7 @@ weight: 62
 title: My Course Notes
 subtitle:
 content:
-  page_type: book
+  page_type: widget_page
   filter_default: 0
   filter_button:
   - name: All

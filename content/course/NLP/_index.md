@@ -1,7 +1,6 @@
 ---
 # Title, summary, and page position.
 linktitle: NLP
-summary: NLP course notes.
 weight: 1
 icon: book
 icon_pack: fas
@@ -9,5 +8,12 @@ icon_pack: fas
 # Page metadata.
 title: NLP
 date: "2021-11-20T00:00:00Z"
-type: page
+type: widget_page
 ---
+
+### Summary
+Natural language processing (NLP) or computational linguistics is one of the most important technologies of the information age. Applications of NLP are everywhere because people communicate almost everything in language: web search, advertising, emails, customer service, language translation, virtual agents, medical reports, etc. In recent years, deep learning (or neural network) approaches have obtained very high performance across many different NLP tasks, using single end-to-end neural models that do not require traditional, task-specific feature engineering
+
+### Table of Contents:
+[Chapter 1]({{< relref "./../Introduction/page/">}})
+[Chapter 2]({{< relref "./../Genism-word-vectors/page/">}})
