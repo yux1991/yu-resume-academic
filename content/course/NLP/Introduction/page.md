@@ -1,7 +1,6 @@
 ---
-title: Introduction to NLP
-linktitle: Introduction to NLP
-subtitle: Chapter 1 lecture notes of Natural Language Processing with Deep Learning.
+title: Chapter 1 lecture notes of Natural Language Processing with Deep Learning
+linktitle: Intro-NLP
 type: book
 
 # Date published

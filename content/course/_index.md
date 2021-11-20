@@ -1,5 +1,5 @@
 ---
-title: NLP Course
+title: Course Notes
 type: page
 
 header:
@@ -7,4 +7,4 @@ header:
   image: ""
 ---
 
-My NLP course learning materials!
+My course notes!
