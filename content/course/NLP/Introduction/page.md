@@ -1,6 +1,6 @@
 ---
-title: Chapter 1 lecture notes of Natural Language Processing with Deep Learning
-linktitle: Intro-NLP
+title: NLP - Chapter 1
+linktitle: Introduction
 type: book
 
 # Date published
@@ -17,7 +17,7 @@ authors:
 - admin
 
 tags:
-- Natural Language Processing
+- NLP
 - Word Vectors
 - Singular Value Decomposition
 - Skip-gram
@@ -28,7 +28,7 @@ tags:
 
 
 categories:
-- NLP
+- Course Notes
 
 ---
 ### Introduction
