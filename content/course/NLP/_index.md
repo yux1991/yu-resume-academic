@@ -18,5 +18,4 @@ tags:
 Natural language processing (NLP) or computational linguistics is one of the most important technologies of the information age. Applications of NLP are everywhere because people communicate almost everything in language: web search, advertising, emails, customer service, language translation, virtual agents, medical reports, etc. In recent years, deep learning (or neural network) approaches have obtained very high performance across many different NLP tasks, using single end-to-end neural models that do not require traditional, task-specific feature engineering
 
 ### Table of Contents:
-[Chapter 1]({{< relref "./../Introduction/page/">}})
-[Chapter 2]({{< relref "./../Genism-word-vectors/page/">}})
+[Chapter 1]({{< relref "./../Introduction/page.md">}})
