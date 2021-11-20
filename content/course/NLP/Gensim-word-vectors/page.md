@@ -27,7 +27,7 @@ categories:
 - Course Notes
 
 ---
-## Introduction
+## 1. Introduction
 
 ### What are the common NLP tasks?
 
@@ -43,7 +43,7 @@ categories:
   * Coreference (e.g. What does "he" or "it" refer to given a document?)
   * Question Answering (e.g. Answering Jeopardy questions).
 
-## Word Vectors
+## 2. Word Vectors
 
 ### One-hot vector
 

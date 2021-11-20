@@ -33,9 +33,9 @@ categories:
 - Course Notes
 
 ---
-### Introduction
+## 1. Introduction
 
-#### What are the common NLP tasks?
+### What are the common NLP tasks?
 
 * Easy
   * Spell Checking
@@ -49,14 +49,14 @@ categories:
   * Coreference (e.g. What does "he" or "it" refer to given a document?)
   * Question Answering (e.g. Answering Jeopardy questions).
 
-### Word Vectors
+## 2. Word Vectors
 
-#### One-hot vector
+### One-hot vector
 
 * Represent every word as an $\mathbb{R}^{|V|\times1}$ vector with all 0s and one 1 at the index of that word in the sorted english language, where $|V|$ is the size of the vocabulary.
 * This word representation does not give us directly any notion of similarity because all the vectors are orthogonal.
 
-#### SVD based methods
+### SVD based methods
 
 * General idea:
   * Loop over a massive dataset and accumulate word co-occurrence counts in some form of a matrix $X$.
@@ -78,7 +78,7 @@ categories:
   * It is hard to incorporate new words or documents.
   * Computational cost for a $m\times n$ matrix is $O(mn^2)$.
 
-#### Iteration Based Methods - Word2vec
+### Iteration Based Methods - Word2vec
 
 * General idea:
   * Design a model whose parameters are the word vectors
