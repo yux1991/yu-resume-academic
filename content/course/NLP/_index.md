@@ -6,9 +6,12 @@ icon: book
 icon_pack: fas
 
 # Page metadata.
-title: NLP
+title: Natural Language Processing
 date: "2021-11-20T00:00:00Z"
-type: widget_page
+type: page
+tags:
+- NLP
+
 ---
 
 ### Summary
