@@ -13,3 +13,5 @@ date: "2021-11-20T00:00:00Z"
 type: page
 
 ---
+
+[Return to course list]({{< relref "../" >}}) 

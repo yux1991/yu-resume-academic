@@ -2,6 +2,7 @@
 title: NLP - Chapter 1
 linktitle: Introduction
 type: book
+summary: Introduction to NLP and word vectors.
 
 # Date published
 date: "2021-11-17T00:00:00Z"
@@ -26,6 +27,7 @@ tags:
 - Hierarchical Softmax
 - Word2Vec
 
+weight: 1
 
 categories:
 - Course Notes

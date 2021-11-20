@@ -2,6 +2,7 @@
 title: NLP - Chapter 2
 linktitle: Gensim Word Vectors
 type: book
+summary: Introduction to the Gensim word vectors.
 
 # Date published
 date: "2021-11-17T00:00:00Z"
@@ -19,6 +20,8 @@ authors:
 tags:
 - NLP
 - Gensim Word Vectors
+
+weight: 2
 
 categories:
 - Course Notes
