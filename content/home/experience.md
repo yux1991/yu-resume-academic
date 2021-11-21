@@ -32,10 +32,10 @@ experience:
     description: |2-
         Responsibilities include:
         
-        * Held meetings with the customers to understand the business scope, establish project timeline, present the updates, and reach agreement on the final deliveries.
-        * Performed exploratory data analysis and feature engineering to remove outliers, impute missing data and characterize the stationarity/correlation of the raw data.
-        * Build the multivariate encoder-decoder attention model with two-head outputs that overcomes the conventional methods’limitations in long-term forecasting and sparse inputs.
-        * Deployed the models on native Amazon web service (NAWS) and provided launch support to the customers.
+        * Hosted meetings with the leaderships from Amazon operational team to understand their business scope, establish project timeline, and negotiate on the final deliveries.
+        * Performed exploratory data analysis to identify any data quality issues, and feature engineering to pre-process the data.
+        * Created the multivariate encoder-decoder attention model with two-head outputs to overcomes the conventional time series methods’ limitations in long-term forecasting and sparse inputs.
+        * Setup the data pipeline and deployed the models on native Amazon web service (NAWS) to retrain and make predictions on the weekly basis, saving at least $2MM operational cost per year.
         
   - title: Seismic Imager
     company: CGG
