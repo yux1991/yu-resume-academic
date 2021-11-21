@@ -7,7 +7,7 @@ summary: Introduction to NLP and word vectors.
 # Date published
 date: "2021-11-17T00:00:00Z"
 
-# Featured image
+featured: false
 image:
   caption: 'Image credit: [**International Banker**](https://internationalbanker.com/technology/how-the-financial-industry-is-using-natural-language-processing/)'
   focal_point: ""
