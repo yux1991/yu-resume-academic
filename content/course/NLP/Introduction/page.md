@@ -1,5 +1,5 @@
 ---
-title: NLP - Chapter 1
+title: Chapter 1
 linktitle: Introduction
 type: book
 summary: Introduction to NLP and word vectors.

@@ -1,7 +1,7 @@
 ---
 # Title, summary, and page position.
 linktitle: NLP
-summary: Natural language processing (NLP) or computational linguistics is one of the most important technologies of the information age. Applications of NLP are everywhere because people communicate almost everything in language, including web search, advertising, emails, customer service, language translation, virtual agents, medical reports, etc. In recent years, deep learning (or neural network) approaches have obtained very high performance across many different NLP tasks, using single end-to-end neural models that do not require traditional, task-specific feature engineering
+summary: This is the notes for Natural Language Processing with Deep Learning course (CS224n) at Stanford University.
 
 weight: 1
 icon: book
@@ -15,3 +15,8 @@ type: page
 ---
 
 [{{< icon name="arrow-left" pack="fas" >}} Return to the course list]({{< relref "../" >}}) 
+
+The course homepage is:
+[CS224n](http://web.stanford.edu/class/cs224n/)
+
+The list of chapters are:

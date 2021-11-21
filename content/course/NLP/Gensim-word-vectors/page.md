@@ -1,5 +1,5 @@
 ---
-title: NLP - Chapter 2
+title: Chapter 2
 linktitle: Gensim Word Vectors
 type: book
 summary: Introduction to the Gensim word vectors.
