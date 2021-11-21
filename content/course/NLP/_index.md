@@ -16,7 +16,10 @@ type: page
 
 [{{< icon name="arrow-left" pack="fas" >}} Return to the course list]({{< relref "../" >}}) 
 
-The course homepage is:
+## The course homepage:
 [CS224n](http://web.stanford.edu/class/cs224n/)
 
-The list of chapters are:
+## What is this course about?
+Natural language processing (NLP) or computational linguistics is one of the most important technologies of the information age. Applications of NLP are everywhere because people communicate almost everything in language: web search, advertising, emails, customer service, language translation, virtual agents, medical reports, etc. In recent years, deep learning (or neural network) approaches have obtained very high performance across many different NLP tasks, using single end-to-end neural models that do not require traditional, task-specific feature engineering. In this course, students will gain a thorough introduction to cutting-edge research in Deep Learning for NLP.
+
+## Table of Contents:
