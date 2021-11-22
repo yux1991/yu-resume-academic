@@ -12,7 +12,6 @@ image:
   caption: 'Image credit: [**Stanford CS224n**](http://web.stanford.edu/class/cs224n/slides/cs224n-2021-lecture02-wordvecs2.pdf)'
   focal_point: ""
   placement: 2
-  preview_only: false
 
 authors:
 - admin

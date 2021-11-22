@@ -12,7 +12,6 @@ image:
   caption: 'Image credit: [**International Banker**](https://internationalbanker.com/technology/how-the-financial-industry-is-using-natural-language-processing/)'
   focal_point: ""
   placement: 2
-  preview_only: false
 
 authors:
 - admin

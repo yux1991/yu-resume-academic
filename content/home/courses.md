@@ -5,7 +5,7 @@ weight: 62
 title: Course Notes
 subtitle:
 content:
-  page_type: course
+  page_type: book
   filter_default: 0
   filter_button:
   - name: All
