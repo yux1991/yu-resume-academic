@@ -1,5 +1,5 @@
 ---
-widget: portfolio
+widget: pages
 headless: true
 weight: 62
 title: Course Notes

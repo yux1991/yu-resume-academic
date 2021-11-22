@@ -12,8 +12,6 @@ title: Natural Language Processing
 date: "2021-11-20T00:00:00Z"
 type: page
 
-view: 2
-
 ---
 
 [{{< icon name="arrow-left" pack="fas" >}} Return to the course list]({{< relref "../" >}}) 
