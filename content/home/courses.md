@@ -1,11 +1,11 @@
 ---
-widget: pages
+widget: portfolio
 headless: true
 weight: 62
 title: Course Notes
 subtitle:
 content:
-  page_type: book
+  page_type: course
   filter_default: 0
   filter_button:
   - name: All

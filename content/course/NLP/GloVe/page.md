@@ -1,6 +1,5 @@
 ---
 title: Chapter 2
-subtitle: GloVe, Evaluation and Training
 linktitle: GloVe, Evaluation and Training
 type: book
 summary: Word Vectors part II - GloVe, Evaluation and Training.
