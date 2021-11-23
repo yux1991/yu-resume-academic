@@ -13,6 +13,7 @@ authors:
 - admin
 
 tags:
+- CS224n 
 - NLP
 - Word Vectors
 - Singular Value Decomposition

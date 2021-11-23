@@ -30,7 +30,7 @@ content:
   - name: Computer Vision
     tag: Computer Vision
   - name: Other
-    tag: Demo
+    tag: Other
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.

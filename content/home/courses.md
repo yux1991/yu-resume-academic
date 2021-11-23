@@ -10,10 +10,10 @@ content:
   filter_button:
   - name: All
     tag: '*'
-  - name: NLP 
-    tag: NLP 
+  - name: CS224n 
+    tag: CS224n 
   - name: Other
-    tag: Demo
+    tag: Other 
 
 
 design:
