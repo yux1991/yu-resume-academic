@@ -127,8 +127,17 @@ categories:
     $$
     7. Optimization objective:
     $$
-      \operatorname{minimize}\ J=-\operatorname{log}\ P(w\_c|w\_{c-m},\cdots,w\_{c-1},w\_{c+1},\cdots,w\_{c+m})\\\\
-      =-\operatorname{log}\ P(u\_c|\hat{v})\\\\
-      =-\operatorname{log}\frac{\exp(u\_c^T\hat{v})}{\sum\_{j=1}^{|V|}\exp(u\_j^T\hat{v})}\\\\
+      \operatorname{minimize}\ J=-\operatorname{log}\ P(w\_c|w\_{c-m},\cdots,w\_{c-1},w\_{c+1},\cdots,w\_{c+m})
+    $$
+
+    $$
+      =-\operatorname{log}\ P(u\_c|\hat{v})
+    $$
+
+    $$
+      =-\operatorname{log}\frac{\exp(u\_c^T\hat{v})}{\sum\_{j=1}^{|V|}\exp(u\_j^T\hat{v})}
+    $$
+
+    $$
       =-u\_c^T\hat{v}+\operatorname{log}\sum\_{j=1}^{|V|}\exp(u\_j^T\hat{v})
     $$
