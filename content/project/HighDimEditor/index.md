@@ -8,6 +8,8 @@ date: "2021-10-31"
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
+weight: 2
+
 image:
   caption: Lena in the curvelet domain
   focal_point: Smart

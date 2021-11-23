@@ -8,6 +8,8 @@ date: "2021-10-31"
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
+weight: 1
+
 image:
   caption: PyRHEED
   focal_point: Smart
