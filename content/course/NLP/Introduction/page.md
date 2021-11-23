@@ -117,15 +117,22 @@ categories:
     * $u_i$ : $i$-th row of $\mathcal{U}$, the output vector representation of word $w_i$.
   * CBOW steps:
     1. Generate one-hot word vectors for the input context of size $m$: $(x^{(c-m)},\cdots,x^{(c-1)},x^{(c+1)},\cdots,x^{(c+m)}\in\mathbb{R}^{|V|})$.
-    2. Get the embedded word vectors for the context $(v\_{c-m}=\mathcal{V}x^{(c-m)}, v\_{c-m+1}=\mathcal{V}x^{(c-m+1)},\cdots,v\_{c+m}=\mathcal{V}x^{(c+m)}\in\mathbb{R}^n)$.
-    3. Average these vectors to get $\hat{v}=\frac{v\_{c-m}+v\_{c-m+1}+\cdots+v\_{c+m}}{2m}\in\mathbb{R}^n$.
-    4. Generage a score vector $z=\mathcal{U}\hat{v}\in\mathbb{R}^{|V|}$.
-    5. Turn the scores into probabilities $\hat{y}=\operatorname{softmax}(z)\in\mathbb{R}^{|V|}$.
-    6. Minimize the cross entropy $H(\hat{y},y)$ between the predicted probability distribution $\hat{y}$ and the true probability distribution $y$:
+    2. Get the embedded word vectors for the context:
+    $$
+      (v\_{c-m}=\mathcal{V}x^{(c-m)}, v\_{c-m+1}=\mathcal{V}x^{(c-m+1)},\cdots,
+    $$
+
+    $$
+      v\_{c+m}=\mathcal{V}x^{(c+m)}\in\mathbb{R}^n)
+    $$
+    1. Average these vectors to get $\hat{v}=\frac{v\_{c-m}+v\_{c-m+1}+\cdots+v\_{c+m}}{2m}\in\mathbb{R}^n$.
+    2. Generage a score vector $z=\mathcal{U}\hat{v}\in\mathbb{R}^{|V|}$.
+    3. Turn the scores into probabilities $\hat{y}=\operatorname{softmax}(z)\in\mathbb{R}^{|V|}$.
+    4. Minimize the cross entropy $H(\hat{y},y)$ between the predicted probability distribution $\hat{y}$ and the true probability distribution $y$:
     $$
       H(\hat{y},y)=-\sum\_{j=1}^{|V|}y\_i\operatorname{log}(\hat{y}\_i)=-y\_i\operatorname{log}(\hat{y}\_i)
     $$
-    7. Optimization objective:
+    1. Optimization objective:
     $$
       \operatorname{minimize}\ J=-\operatorname{log}\ P(w\_c|w\_{c-m},\cdots,w\_{c-1},w\_{c+1},\cdots,w\_{c+m})
     $$
@@ -206,15 +213,27 @@ categories:
     $$
 
     $$
-      =\underset{\theta}{\operatorname{argmax}}\sum\_{(w,c)\in D}\operatorname{log}\frac{1}{1+\exp(-u\_w^Tv\_c)}+\sum\_{(w,c)\in \tilde{D}}\operatorname{log}(1-\frac{1}{1+\exp(-u\_w^Tv\_c)})
+      =\underset{\theta}{\operatorname{argmax}}\sum\_{(w,c)\in D}\operatorname{log}\frac{1}{1+\exp(-u\_w^Tv\_c)}
     $$
 
     $$
-      =\underset{\theta}{\operatorname{argmax}}\sum\_{(w,c)\in D}\operatorname{log}\frac{1}{1+\exp(-u\_w^Tv\_c)}+\sum\_{(w,c)\in \tilde{D}}\operatorname{log}\frac{1}{1+\exp(u\_w^Tv\_c)}
+      +\sum\_{(w,c)\in \tilde{D}}\operatorname{log}(1-\frac{1}{1+\exp(-u\_w^Tv\_c)})
+    $$
+
+    $$
+      =\underset{\theta}{\operatorname{argmax}}\sum\_{(w,c)\in D}\operatorname{log}\frac{1}{1+\exp(-u\_w^Tv\_c)}
+    $$
+
+    $$
+      +\sum\_{(w,c)\in \tilde{D}}\operatorname{log}\frac{1}{1+\exp(u\_w^Tv\_c)}
     $$
     * Objective function:
     $$
-      J=-\sum\_{(w,c)\in D}\operatorname{log}\frac{1}{1+\exp(-u\_w^Tv\_c)}-\sum\_{(w,c)\in \tilde{D}}\operatorname{log}\frac{1}{1+\exp(u\_w^Tv\_c)}
+      J=-\sum\_{(w,c)\in D}\operatorname{log}\frac{1}{1+\exp(-u\_w^Tv\_c)}
+    $$
+
+    $$
+      -\sum\_{(w,c)\in \tilde{D}}\operatorname{log}\frac{1}{1+\exp(u\_w^Tv\_c)}
     $$
     where $\tilde{D}$ is "negative" corpus, which is generated on the fly by randomly sampling from the word bank.
   * New objective function for CBOW:
@@ -225,3 +244,54 @@ categories:
   $$
     J=-\sum\_{j=0,j\neq m}^{2m}\operatorname{log}\sigma(u\_{c-m+j}^T\cdot v\_c)-\sum\_{k=1}^{K}\operatorname{log}\sigma(-\tilde{u}\_k^T\cdot v\_c)
   $$
+  * In the above formulation, $\{\tilde{u}_k|k=1,\cdots,K\}$ are sampled from $P_n(w)$.
+  * What seems to be the best choice for $P_n(w)$ is the Unigram Model raised to the power of $3/4$.
+
+
+* Hierarchical Softmax
+  * General idea:
+    * Uses a binary tree to represent all words in the vocabulary. 
+    * Each leaf of the tree is a word, and there is a unique path from root to leaf. 
+    * In this model, the probability of a word $w$ given a vector $w_i$, $P(w|w_i)$, is equal to the probability of a random walk starting in the root and ending in the leaf node corresponding to $w$.
+  * Notations:
+    * $L(w)$ : the number of nodes in the path from the root to the leaf $w$.
+    *  $n(w,i)$: the $i$-th node on this path associated vector $v_{n(w,i)}$.
+    * $n(w,1)$: root.
+    * $n(w,L(w))$: father of $w$.
+    * $ch(n)$: arbitrarily chosen one of the children of node $n$.
+  * An example of the binary tree for Hierarchical softmax:
+ {{< figure src="binarytree.png" caption="Figure 3. Binary tree for Hierarchical softmax" theme="light" >}} 
+  * Formulization:
+    $$
+      P(w|w\_i)=\prod\_{j=1}^{L(w)-1}\sigma([n(w,j+1)=ch(n(w,j))]\cdot v\_{n(w,j)}^Tv\_{w\_i})
+    $$
+    where:
+    $$
+      [x]=
+      \begin{cases}
+        1 & \text{if x is true}\\\\
+        -1 & \text{otherwise}
+      \end{cases}
+    $$
+  * Remarks:
+    * The term $[n(w,j+1)=ch(n(w,j))]$ provides normalization, because:
+      * At a node $n$, if we sum the probability for going to the left and right node, then for any value of $v_n^Tv_{w_i}$:
+      $$
+        \sigma(v\_n^Tv\_{w\_i})+\sigma(-v\_n^Tv\_{w\_i})=1
+      $$
+      * The normalization ensures that:
+      $$
+        \sum\_{w=1}^{|V|}P(w|w\_i)=1
+      $$
+    * The similarity of our input vector $v_{w_i}$ and each inner node vector $v_{n(w,j)}^T$ is measured by the dot product. 
+    * To train the model, the objective function is:
+    $$
+      L=-\operatorname{log}P(w|w\_i)
+    $$
+    * Instead of updating output vectors per word, we update the vectors of the nodes in the binary tree that are in the path from root to leaf node.
+    * The speed of this method is determined by the way in which the binary tree is constructed and words are assigned to leaf nodes.
+    * One common choice is the [binary Huffman tree](https://en.wikipedia.org/wiki/Huffman_coding), which assigns frequent words shorter paths in the tree.
+
+* Comparison between the Negative Sampling and Hierarchical Softmax:
+  * hierarchical softmax tends to be better for infrequent words.
+  * while negative sampling works better for frequent words and lower dimensional vectors.
