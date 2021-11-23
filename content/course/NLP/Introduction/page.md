@@ -30,7 +30,7 @@ categories:
 ---
 ## 1. Introduction
 
-### What are the common NLP tasks?
+### Common NLP tasks
 
 * Easy
   * Spell Checking
@@ -292,7 +292,7 @@ categories:
     * The similarity of our input vector $v_{w_i}$ and each inner node vector $v_{n(w,j)}^T$ is measured by the dot product. 
     * To train the model, the objective function is:
     $$
-      L=-\operatorname{log}P(w|w\_i)
+      J=-\operatorname{log}P(w|w\_i)
     $$
     * Instead of updating output vectors per word, we update the vectors of the nodes in the binary tree that are in the path from root to leaf node.
     * The speed of this method is determined by the way in which the binary tree is constructed and words are assigned to leaf nodes.
