@@ -103,7 +103,7 @@ categories:
   $$
     P(w_1, w_2, \cdots, w_n) = \prod_{i=N-1}^n P(w_i|w_{i-N+1:i-1})
   $$
-* Continuous Bag of Words Model (CBOW)
+* **Continuous Bag of Words Model (CBOW)**
   * General idea:
     * Predicting a center word from the surrounding context
     * For each word, learn 2 vectors:
@@ -141,3 +141,39 @@ categories:
     $$
       =-u\_c^T\hat{v}+\operatorname{log}\sum\_{j=1}^{|V|}\exp(u\_j^T\hat{v})
     $$
+  * How CBOW works?
+ {{< figure src="cbow.png" caption="Figure 1. CBOW" theme="light" >}} 
+* **Skip-Gram Model**
+  * General idea:
+    * Predicting surrounding contex words given a center word.
+  * Notation for Skip-Gram model:
+    * $w_i$ : word $i$ from vocabulary $V$.
+    * $\mathcal{V}\in\mathbb{R}^{n\times|V|}$ : input word matrix
+    * $v_i$ : $i$-th column of $\mathcal{V}$, the input vector representation of word $w_i$.
+    * $\mathcal{U}\in\mathbb{R}^{|V|\times n}$ : output word matrix
+    * $u_i$ : $i$-th row of $\mathcal{U}$, the output vector representation of word $w_i$.
+  *  Skip-Gram steps:
+    1. Generate one-hot input vectors $x\in\mathbb{R}^{|V|}$ of the center word.
+    2. Get embedded word vector for the center word $v_c=\mathcal{V}x\in\mathbb{R}^n$.
+    3. Generate a score vector $z=\mathcal{U}v_c$.
+    4. Turn the scores into probabilities $\hat{y}=\operatorname{softmax}(z)\in\mathbb{R}^{|V|}$.
+    5. Match the predicted probability $\hat{y}$ to the true probability $y$.
+    6. Naive Bayes assumption: given the center word, all output words are completely independent.
+    7. Optimization objective:
+    $$
+      \operatorname{minimize}\ J=-\operatorname{log}\ P(w\\_{c-m},\cdots,w\\_{c-1},w\\_{c+1},\cdots,w\\_{c+m}|w\\_c)
+    $$
+
+    $$
+      =-\operatorname{log}\prod\_{j=0,j\neq m}^{2m}P(w\_{c-m+j}|w\_c)=\sum\_{j=0,j\neq m}^{2m}\ H(\hat{y},y\_{c-m+j})
+    $$
+
+    $$
+      =-\operatorname{log}\prod\_{j=0,j\neq m}^{2m}\frac{\exp(v\_{c-m+j}^Tv\_c)}{\sum\_{k=1}^{|V|}\exp(u\_k^Tv\_c)}
+    $$
+
+    $$
+      =-\sum\_{j=0,j\neq m}^{2m}\ u\_{c-m+j}^Tv\_c+2m\operatorname{log}\sum\_{k=1}^{|V|}\exp(u\_k^Tv\_c)
+    $$
+  * How Skip-Gram works?
+ {{< figure src="skipgram.png" caption="Figure 2. Skip-Gram" theme="light" >}} 
