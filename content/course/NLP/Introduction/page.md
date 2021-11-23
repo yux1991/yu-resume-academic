@@ -114,9 +114,9 @@ categories:
       * $u$: (output vector) when the word is in the center
   * Notation for CBOW model:
     * $w_i$ : word $i$ from vocabulary $V$.
-    * $\mathcal{V}\in\mathbb{R}^{n\times|V|}$ : input word matrix
+    * $\mathcal{V}\in\mathbb{R}^{n\times|V|}$ : input word matrix.
     * $v_i$ : $i$-th column of $\mathcal{V}$, the input vector representation of word $w_i$.
-    * $\mathcal{U}\in\mathbb{R}^{|V|\times n}$ : output word matrix
+    * $\mathcal{U}\in\mathbb{R}^{|V|\times n}$ : output word matrix.
     * $u_i$ : $i$-th row of $\mathcal{U}$, the output vector representation of word $w_i$.
   * CBOW steps:
     1. Generate one-hot word vectors for the input context of size $m$: $(x^{(c-m)},\cdots,x^{(c-1)},x^{(c+1)},\cdots,x^{(c+m)}\in\mathbb{R}^{|V|})$.
@@ -160,9 +160,9 @@ categories:
     * Predicting surrounding contex words given a center word.
   * Notation for Skip-Gram model:
     * $w_i$ : word $i$ from vocabulary $V$.
-    * $\mathcal{V}\in\mathbb{R}^{n\times|V|}$ : input word matrix
+    * $\mathcal{V}\in\mathbb{R}^{n\times|V|}$ : input word matrix.
     * $v_i$ : $i$-th column of $\mathcal{V}$, the input vector representation of word $w_i$.
-    * $\mathcal{U}\in\mathbb{R}^{|V|\times n}$ : output word matrix
+    * $\mathcal{U}\in\mathbb{R}^{|V|\times n}$ : output word matrix.
     * $u_i$ : $i$-th row of $\mathcal{U}$, the output vector representation of word $w_i$.
   *  Skip-Gram steps:
     1. Generate one-hot input vectors $x\in\mathbb{R}^{|V|}$ of the center word.
@@ -251,7 +251,7 @@ categories:
   $$
     J=-\sum\_{j=0,j\neq m}^{2m}\operatorname{log}\sigma(u\_{c-m+j}^T\cdot v\_c)-\sum\_{k=1}^{K}\operatorname{log}\sigma(-\tilde{u}\_k^T\cdot v\_c)
   $$
-  * In the above formulation, $\{\tilde{u}_k|k=1,\cdots,K\}$ are sampled from $P_n(w)$.
+  * In the above formulation, $(\tilde{u}_k|k=1,\cdots,K)$ are sampled from $P_n(w)$.
   * What seems to be the best choice for $P_n(w)$ is the Unigram Model raised to the power of $3/4$.
 
 
@@ -298,6 +298,6 @@ categories:
     * The speed of this method is determined by the way in which the binary tree is constructed and words are assigned to leaf nodes.
     * One common choice is the [binary Huffman tree](https://en.wikipedia.org/wiki/Huffman_coding), which assigns frequent words shorter paths in the tree.
 
-### Comparison between the Negative Sampling and Hierarchical Softmax:
-  * hierarchical softmax tends to be better for infrequent words.
-  * while negative sampling works better for frequent words and lower dimensional vectors.
+### Negative Sampling vs Hierarchical Softmax:
+  * Hierarchical softmax tends to be better for infrequent words.
+  * Negative sampling works better for frequent words and lower dimensional vectors.
