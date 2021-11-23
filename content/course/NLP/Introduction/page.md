@@ -103,7 +103,10 @@ categories:
   $$
     P(w_1, w_2, \cdots, w_n) = \prod_{i=N-1}^n P(w_i|w_{i-N+1:i-1})
   $$
-* **Continuous Bag of Words Model (CBOW)**
+
+## 3. Two Algorithms
+### Continuous Bag of Words Model (CBOW)
+
   * General idea:
     * Predicting a center word from the surrounding context
     * For each word, learn 2 vectors:
@@ -150,7 +153,9 @@ categories:
     $$
   * How CBOW works?
  {{< figure src="cbow.png" caption="Figure 1. CBOW" theme="light" >}} 
-* **Skip-Gram Model**
+
+### Skip-Gram Model
+
   * General idea:
     * Predicting surrounding contex words given a center word.
   * Notation for Skip-Gram model:
@@ -167,24 +172,26 @@ categories:
     5. Match the predicted probability $\hat{y}$ to the true probability $y$.
     6. Naive Bayes assumption: given the center word, all output words are completely independent.
     7. Optimization objective:
-    $$
-      \operatorname{minimize}\ J=-\operatorname{log}\ P(w\_{c-m},\cdots,w\_{c-1},w\_{c+1},\cdots,w\_{c+m}|w\_c)
-    $$
+  $$
+    \operatorname{minimize}\ J=-\operatorname{log}\ P(w\_{c-m},\cdots,w\_{c-1},w\_{c+1},\cdots,w\_{c+m}|w\_c)
+  $$
 
-    $$
-      =-\operatorname{log}\prod\_{j=0,j\neq m}^{2m}P(w\_{c-m+j}|w\_c)=\sum\_{j=0,j\neq m}^{2m}\ H(\hat{y},y\_{c-m+j})
-    $$
+  $$
+    =-\operatorname{log}\prod\_{j=0,j\neq m}^{2m}P(w\_{c-m+j}|w\_c)=\sum\_{j=0,j\neq m}^{2m}\ H(\hat{y},y\_{c-m+j})
+  $$
 
-    $$
-      =-\operatorname{log}\prod\_{j=0,j\neq m}^{2m}\frac{\exp(v\_{c-m+j}^Tv\_c)}{\sum\_{k=1}^{|V|}\exp(u\_k^Tv\_c)}
-    $$
+  $$
+    =-\operatorname{log}\prod\_{j=0,j\neq m}^{2m}\frac{\exp(v\_{c-m+j}^Tv\_c)}{\sum\_{k=1}^{|V|}\exp(u\_k^Tv\_c)}
+  $$
 
-    $$
-      =-\sum\_{j=0,j\neq m}^{2m}\ u\_{c-m+j}^Tv\_c+2m\operatorname{log}\sum\_{k=1}^{|V|}\exp(u\_k^Tv\_c)
-    $$
+  $$
+    =-\sum\_{j=0,j\neq m}^{2m}\ u\_{c-m+j}^Tv\_c+2m\operatorname{log}\sum\_{k=1}^{|V|}\exp(u\_k^Tv\_c)
+  $$
   * How Skip-Gram works?
  {{< figure src="skipgram.png" caption="Figure 2. Skip-Gram" theme="light" >}} 
-* Negative Sampling
+
+## 4. Two Training Methods
+### Negative Sampling
   * Motivation:
     * The summation over $|V|$ in the objective function is computationally huge.
     * For every training step, instead of looping over the entire vocabulary, just "sample" from a noise distribution $(P_n(w))$ whose probabilities match the ordering of the frequency of the vocabulary.
@@ -248,7 +255,7 @@ categories:
   * What seems to be the best choice for $P_n(w)$ is the Unigram Model raised to the power of $3/4$.
 
 
-* Hierarchical Softmax
+### Hierarchical Softmax
   * General idea:
     * Uses a binary tree to represent all words in the vocabulary. 
     * Each leaf of the tree is a word, and there is a unique path from root to leaf. 
@@ -267,8 +274,7 @@ categories:
     $$
     where:
     $$
-      [x]=
-      \begin{cases}
+      \[x\]=\begin{cases}
         1 & \text{if x is true}\\\\
         -1 & \text{otherwise}
       \end{cases}
@@ -292,6 +298,6 @@ categories:
     * The speed of this method is determined by the way in which the binary tree is constructed and words are assigned to leaf nodes.
     * One common choice is the [binary Huffman tree](https://en.wikipedia.org/wiki/Huffman_coding), which assigns frequent words shorter paths in the tree.
 
-* Comparison between the Negative Sampling and Hierarchical Softmax:
+### Comparison between the Negative Sampling and Hierarchical Softmax:
   * hierarchical softmax tends to be better for infrequent words.
   * while negative sampling works better for frequent words and lower dimensional vectors.
