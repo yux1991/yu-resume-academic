@@ -161,7 +161,7 @@ categories:
     6. Naive Bayes assumption: given the center word, all output words are completely independent.
     7. Optimization objective:
     $$
-      \operatorname{minimize}\ J=-\operatorname{log}\ P(w\\_{c-m},\cdots,w\\_{c-1},w\\_{c+1},\cdots,w\\_{c+m}|w\\_c)
+      \operatorname{minimize}\ J=-\operatorname{log}\ P(w\_{c-m},\cdots,w\_{c-1},w\_{c+1},\cdots,w\_{c+m}|w\_c)
     $$
 
     $$
@@ -177,3 +177,51 @@ categories:
     $$
   * How Skip-Gram works?
  {{< figure src="skipgram.png" caption="Figure 2. Skip-Gram" theme="light" >}} 
+* Negative Sampling
+  * Motivation:
+    * The summation over $|V|$ in the objective function is computationally huge.
+    * For every training step, instead of looping over the entire vocabulary, just "sample" from a noise distribution $(P_n(w))$ whose probabilities match the ordering of the frequency of the vocabulary.
+  * Intuition:
+    1. Treat the target word and a neighboring context word as positive examples.
+    2. Randomly sample other words in the lexicon to get negative samples.
+    3. Use logistic regression to train a classifier to distinguish those two cases.
+    4. Use the learned weights as the embeddings.
+  * Formulization:
+    * Consider a pair $(w,c)$ of word and context.
+      * Denote by $P(D=1|w,c)$ the probability that $(w,c)$ came from the corpus data.
+      * Denote by $P(D=0|w,c)$ the probability that $(w,c)$ did not come from the corpus data.
+    * Model $P(D=1|w,c)$ with **logistic** or **sigmoid** function:
+      * The word vectors of $w$ and $c$ are similar if they have a high dot product $v_c^Tv_w$. However, this dot product is not a probability, because it ranges from $-\infty$ to $\infty$. 
+      * To turn this dot product into a probability, use the logistic function:
+      $$
+        P(D=1|w,c,\theta)=\sigma(v\_c^Tv\_w)=\frac{1}{1+e^{(-v\_c^Tv\_w)}}
+      $$
+    * MLE of the model parameters $\theta$:
+    $$
+      \theta=\underset{\theta}{\operatorname{argmax}}\prod\_{(w,c)\in D}P(D=1|w,c,\theta)\prod\_{(w,c)\in \tilde{D}}P(D=0|w,c,\theta)
+    $$
+
+    $$
+      =\underset{\theta}{\operatorname{argmax}}\prod\_{(w,c)\in D}P(D=1|w,c,\theta)\prod\_{(w,c)\in \tilde{D}}(1-P(D=1|w,c,\theta))
+    $$
+
+    $$
+      =\underset{\theta}{\operatorname{argmax}}\sum\_{(w,c)\in D}\operatorname{log}\frac{1}{1+\exp(-u\_w^Tv\_c)}+\sum\_{(w,c)\in \tilde{D}}\operatorname{log}(1-\frac{1}{1+\exp(-u\_w^Tv\_c)})
+    $$
+
+    $$
+      =\underset{\theta}{\operatorname{argmax}}\sum\_{(w,c)\in D}\operatorname{log}\frac{1}{1+\exp(-u\_w^Tv\_c)}+\sum\_{(w,c)\in \tilde{D}}\operatorname{log}\frac{1}{1+\exp(u\_w^Tv\_c)}
+    $$
+    * Objective function:
+    $$
+      J=-\sum\_{(w,c)\in D}\operatorname{log}\frac{1}{1+\exp(-u\_w^Tv\_c)}-\sum\_{(w,c)\in \tilde{D}}\operatorname{log}\frac{1}{1+\exp(u\_w^Tv\_c)}
+    $$
+    where $\tilde{D}$ is "negative" corpus, which is generated on the fly by randomly sampling from the word bank.
+  * New objective function for CBOW:
+  $$
+    J=-\operatorname{log}\sigma(u\_{c}^T\cdot \hat{v}\_c)-\sum\_{k=1}^{K}\operatorname{log}\sigma(-\tilde{u}\_k^T\cdot \hat{v}\_c)
+  $$
+  * New objective function for Skip-Gram:
+  $$
+    J=-\sum\_{j=0,j\neq m}^{2m}\operatorname{log}\sigma(u\_{c-m+j}^T\cdot v\_c)-\sum\_{k=1}^{K}\operatorname{log}\sigma(-\tilde{u}\_k^T\cdot v\_c)
+  $$
