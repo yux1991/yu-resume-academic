@@ -62,7 +62,7 @@ categories:
     * Assumption: words that are related will often appear in the same documents.
     * Loop over all documents and for each time word $i$ appears in document $j$, we add one to entry $X_{ij}$.
   * Window based Co-occurrence Matrix:
-    * The matrix $X$ stores co-occurrences of words theereby becoming an affinity matrix.
+    * The matrix $X$ stores co-occurrences of words thereby becoming an affinity matrix.
     * Calculate the number of times each word appears inside a window of a particular size around the word of interest.
 * Applying SVD to the cooccurrence matrix
   * Apply SVD on $X$ to get $X=USV^T$.
@@ -104,4 +104,31 @@ categories:
     P(w_1, w_2, \cdots, w_n) = \prod_{i=N-1}^n P(w_i|w_{i-N+1:i-1})
   $$
 * Continuous Bag of Words Model (CBOW)
-  * 
+  * General idea:
+    * Predicting a center word from the surrounding context
+    * For each word, learn 2 vectors:
+      * $v$: (input vector) when the word is in the context
+      * $u$: (output vector) when the word is in the center
+  * Notation for CBOW model:
+    * $w_i$ : word $i$ from vocabulary $V$.
+    * $\mathcal{V}\in\mathbb{R}^{n\times|V|}$ : input word matrix
+    * $v_i$ : $i$-th column of $\mathcal{V}$, the input vector representation of word $w_i$.
+    * $\mathcal{U}\in\mathbb{R}^{|V|\times n}$ : output word matrix
+    * $u_i$ : $i$-th row of $\mathcal{U}$, the output vector representation of word $w_i$.
+  * CBOW steps:
+    1. Generate one-hot word vectors for the input context of size $m$: $(x^{(c-m)},\cdots,x^{(c-1)},x^{(c+1)},\cdots,x^{(c+m)}\in\mathbb{R}^{|V|})$.
+    2. Get the embedded word vectors for the context $(v\_{c-m}=\mathcal{V}x^{(c-m)}, v\_{c-m+1}=\mathcal{V}x^{(c-m+1)},\cdots,v\_{c+m}=\mathcal{V}x^{(c+m)}\in\mathbb{R}^n)$.
+    3. Average these vectors to get $\hat{v}=\frac{v\_{c-m}+v\_{c-m+1}+\cdots+v\_{c+m}}{2m}\in\mathbb{R}^n$.
+    4. Generage a score vector $z=\mathcal{U}\hat{v}\in\mathbb{R}^{|V|}$.
+    5. Turn the scores into probabilities $\hat{y}=\operatorname{softmax}(z)\in\mathbb{R}^{|V|}$.
+    6. Minimize the cross entropy $H(\hat{y},y)$ between the predicted probability distribution $\hat{y}$ and the true probability distribution $y$:
+    $$
+      H(\hat{y},y)=-\sum\_{j=1}^{|V|}y\_i\operatorname{log}(\hat{y}\_i)=-y\_i\operatorname{log}(\hat{y}\_i)
+    $$
+    7. Optimization objective:
+    $$
+      \operatorname{minimize}\ J=-\operatorname{log}\ P(w\_c|w\_{c-m},\cdots,w\_{c-1},w\_{c+1},\cdots,w\_{c+m})\\\\
+      =-\operatorname{log}\ P(u\_c|\hat{v})\\\\
+      =-\operatorname{log}\frac{\exp(u\_c^T\hat{v})}{\sum\_{j=1}^{|V|}\exp(u\_j^T\hat{v})}\\\\
+      =-u\_c^T\hat{v}+\operatorname{log}\sum\_{j=1}^{|V|}\exp(u\_j^T\hat{v})
+    $$
