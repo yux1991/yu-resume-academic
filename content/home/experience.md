@@ -31,11 +31,12 @@ experience:
     date_end: ''
     description: |2-
         Responsibilities include:
-        
-        * Hosted meetings with the leaderships from Amazon operational team to understand their business scope, establish project timeline, and negotiate on the final deliveries.
-        * Performed exploratory data analysis to identify any data quality issues, and feature engineering to pre-process the data.
-        * Created the multivariate encoder-decoder attention model with two-head outputs to overcomes the conventional time series methods’ limitations in long-term forecasting and sparse inputs.
-        * Setup the data pipeline and deployed the models on native Amazon web service (NAWS) to retrain and make predictions on the weekly basis, saving at least $2MM operational cost per year.
+
+        * Built machine learning models to forecast critical quantities such as shuttle transactions and warehouse transfer arrivals for sales and operations planning at Amazon, saving at least several million dollars per year.
+        * Developed the Chatbot that translates human language into SQL queries to pull tables from the database, and make forecast for the target feature by learning from the historical data.
+        * Created a one-stop solution to the long-term forecasting problem with highly sparse inputs by designing a novel multivariate encoder-decoder attention model with two-head outputs.
+        * Setup the data pipeline and deployed the models on native Amazon web service (NAWS) to retrain and make predictions on any given cadence, while continuously monitoring the input data using a model drift detector. 
+
         
   - title: Seismic Imager
     company: CGG
