@@ -166,20 +166,20 @@ categories:
     * $\mathcal{U}\in\mathbb{R}^{|V|\times n}$ : output word matrix.
     * $u_i$ : $i$-th row of $\mathcal{U}$, the output vector representation of word $w_i$.
   *  Skip-Gram steps:
-    1. Generate one-hot input vectors $x\in\mathbb{R}^{|V|}$ of the center word.
-    2. Get embedded word vector for the center word $v_c=\mathcal{V}x\in\mathbb{R}^n$.
-    3. Generate a score vector $z=\mathcal{U}v_c$.
-    4. Turn the scores into probabilities $\hat{y}=\operatorname{softmax}(z)\in\mathbb{R}^{|V|}$.
-    5. Match the predicted probability $\hat{y}$ to the true probability $y$.
-    6. Naive Bayes assumption: given the center word, all output words are completely independent.
-    7. Optimization objective:
-  $$
-    \operatorname{minimize}\ J=-\operatorname{log}\ P(w\_{c-m},\cdots,w\_{c-1},w\_{c+1},\cdots,w\_{c+m}|w\_c)
-  $$
+  1. Generate one-hot input vectors $x\in\mathbb{R}^{|V|}$ of the center word.
+  2. Get embedded word vector for the center word $v_c=\mathcal{V}x\in\mathbb{R}^n$.
+  3. Generate a score vector $z=\mathcal{U}v_c$.
+  4. Turn the scores into probabilities $\hat{y}=\operatorname{softmax}(z)\in\mathbb{R}^{|V|}$.
+  5. Match the predicted probability $\hat{y}$ to the true probability $y$.
+  6. Naive Bayes assumption: given the center word, all output words are completely independent.
+  7. Optimization objective:
+$$
+  \operatorname{minimize}\ J=-\operatorname{log}\ P(w\_{c-m},\cdots,w\_{c-1},w\_{c+1},\cdots,w\_{c+m}|w\_c)
+$$
 
-  $$
-    =-\operatorname{log}\prod\_{j=0,j\neq m}^{2m}P(w\_{c-m+j}|w\_c)=\sum\_{j=0,j\neq m}^{2m}\ H(\hat{y},y\_{c-m+j})
-  $$
+$$
+  =-\operatorname{log}\prod\_{j=0,j\neq m}^{2m}P(w\_{c-m+j}|w\_c)=\sum\_{j=0,j\neq m}^{2m}\ H(\hat{y},y\_{c-m+j})
+$$
 
   $$
     =-\operatorname{log}\prod\_{j=0,j\neq m}^{2m}\frac{\exp(v\_{c-m+j}^Tv\_c)}{\sum\_{k=1}^{|V|}\exp(u\_k^Tv\_c)}
