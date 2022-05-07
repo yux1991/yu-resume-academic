@@ -6,7 +6,7 @@ title: Yu Xiang
 superuser: true
 
 # Role/position/tagline
-role: Data Scientist
+role: Applied Scientist
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -14,13 +14,12 @@ organizations:
   url: https://www.amazon.com/
 
 # Short bio (displayed in user profile at end of posts)
-bio: PhD in Physics, Data Scientist.
+bio: PhD in Physics, Applied Scientist.
 
 # Interests to show in About widget
 interests:
-- Computer Vision
 - Natural Language Processing
-- Data Mining
+- Computer Vision
 
 # Education to show in About widget
 education:
@@ -64,6 +63,6 @@ email: "yux1991@gmail.com"
 highlight_name: true
 ---
 
-Yu Xiang got his PhD degree in Physics at Rensselaer Polytechnic Institute in 2019. When he was a PhD student, his research was mainly about electron diffraction data analysis. After graduation, he joined CGG as a Seismic Imager. One and half year later, he joined Amazon as a Data Scientist with focus on Operational-Planning science. His interests include computer vision, natural language processing and data mining.
+Yu Xiang got his PhD degree in Physics at Rensselaer Polytechnic Institute in 2019. When he was a PhD student, his research was mainly about electron diffraction data analysis. After graduation, he joined CGG as a Seismic Imager. Right now he is an Applied Scientis at Amazon working on the Natural Language Processing projects in the Amazon Smart Vehicle team.
 
 {{< icon name="download" pack="fas" >}} Download his {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}} or {{< staticref "uploads/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
