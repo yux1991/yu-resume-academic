@@ -38,7 +38,7 @@ featured: false
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: 'https://yux1991.github.io/PDFs/PhD_Thesis_Reduced.pdf'
+url_pdf: ''
 url_code: ''
 url_dataset: ''
 url_poster: ''
