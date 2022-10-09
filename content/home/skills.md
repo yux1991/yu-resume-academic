@@ -22,7 +22,7 @@ feature:
 - icon: aws
   icon_pack: fab
   name: AWS
-- icon: chart-line-up
+- icon: chart-line
   icon_pack: fas
   name: Data Analysis
 
