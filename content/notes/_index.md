@@ -1,5 +1,5 @@
 ---
-title: Courses
+title: Notes
 type: page
 
 header:

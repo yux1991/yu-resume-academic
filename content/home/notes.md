@@ -2,7 +2,7 @@
 widget: portfolio
 headless: true
 weight: 62
-title: Course Notes
+title: Notes
 subtitle:
 content:
   page_type: book
