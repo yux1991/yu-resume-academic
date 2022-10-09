@@ -74,7 +74,7 @@ To overcome this bottle neck, a comprehensive understanding of the structure of 
 This ARHEED methodology also has been applied to ML WS2 and is expected to be applicable to other ML transition metal dichalcogenides on arbitrary crystalline or non-crystalline substrates.
 
 
-## 3D Reciprocal Space Structure:
+## 3D Reciprocal Space Structure
 
 This is the 3D reciprocal space structure constructed from MoS2 on sapphire:
 ![MoS2_3D](MoS2-3D.gif "An annimation showing the 3D reciprocal space structure")

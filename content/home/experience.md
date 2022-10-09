@@ -26,9 +26,22 @@ experience:
     company: Amazon
     company_url: 'https://www.amazon.com/'
     company_logo: org-amz
+    location: Seattle, WA
+    date_start: '2022-05-02'
+    date_end: ''
+    description: |2-
+        Responsibilities include:
+
+        * Designed new features and expanded the existing ones to support both in-cabin and remote voice based car control capabilities across different regions of the world in the Alexa automotive domain. 
+        * Reduced all forms of frictions by building statistical models to derive accurate interpretation of the customer utterances using the latest natural language processing and machine learning technologies.
+
+  - title: Data Scientist
+    company: Amazon
+    company_url: 'https://www.amazon.com/'
+    company_logo: org-amz
     location: Bellevue, WA
     date_start: '2021-05-24'
-    date_end: ''
+    date_end: '2022-05-01'
     description: |2-
         Responsibilities include:
 
@@ -36,7 +49,6 @@ experience:
         * Developed the Chatbot that translates human language into SQL queries to pull tables from the database, and make forecast for the target feature by learning from the historical data.
         * Created a one-stop solution to the long-term forecasting problem with highly sparse inputs by designing a novel multivariate encoder-decoder attention model with two-head outputs.
         * Setup the data pipeline and deployed the models on native Amazon web service (NAWS) to retrain and make predictions on any given cadence, while continuously monitoring the input data using a model drift detector. 
-
         
   - title: Seismic Imager
     company: CGG
