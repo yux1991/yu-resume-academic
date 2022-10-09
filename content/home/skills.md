@@ -22,9 +22,6 @@ feature:
 - icon: aws
   icon_pack: fab
   name: AWS
-- icon: language
-  icon_pack: fas
-  name: Natural Language Processing
 - icon: chart-mixed
   icon_pack: fas
   name: Data Analysis
