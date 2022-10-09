@@ -19,12 +19,15 @@ feature:
 - icon: python
   icon_pack: fab
   name: Python
-- icon: chart-line
+- icon: aws
+  icon_pack: fab
+  name: AWS
+- icon: language
   icon_pack: fas
-  name: Statistics
-- icon: cogs
+  name: Natural Language Processing
+- icon: chart-mixed
   icon_pack: fas
-  name: Machine Learning
+  name: Data Analysis
 
 # Uncomment to use emoji icons.
 #- icon: ":smile:"

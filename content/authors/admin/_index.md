@@ -18,6 +18,8 @@ bio: PhD in Physics, Applied Scientist.
 
 # Interests to show in About widget
 interests:
+- Voice Assistant
+- Autonomous Driving
 - Natural Language Processing
 - Computer Vision
 
