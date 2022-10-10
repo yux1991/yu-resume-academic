@@ -77,6 +77,6 @@ The HRLEED study of single crystal graphene on Cu(111) reveals that diffraction 
 
 For graphene buffered van der Waals epitaxial tin mono-sulfide (SnS) thin film, the RHEED patterns show the (010) orientation near the surface of the SnS film grown on the single crystal graphene and a dominant (111) orientation near the surface of the SnS film grown on the polycrystalline graphene. Additional minor orientations near the surface were observed by RHEED that X-ray diffraction (XRD) is not able to detect.
 
-## PhD Defense Presentation
+## PhD Thesis Defense Presentation
 
-<iframe src="https://onedrive.live.com/embed?cid=ED51AACBFF8A8879&resid=ED51AACBFF8A8879%211186&authkey=AEU5MvqMa4HzYJo&em=2" width="402" height="327" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://onedrive.live.com/embed?cid=ED51AACBFF8A8879&resid=ED51AACBFF8A8879%211186&authkey=AEU5MvqMa4HzYJo&em=2" width="800" height="600" frameborder="0" scrolling="no"></iframe>
