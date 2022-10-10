@@ -76,3 +76,7 @@ Through quantitative analysis of the 2D reciprocal space map, one can extract re
 The HRLEED study of single crystal graphene on Cu(111) reveals that diffraction peaks have very similar full-width-at-half-maximums but the average broadening is significantly (~three times) larger than the instrument response (~0.03 Å-1). This suggests a noticeable number of defects exist within both graphene and copper surface. From the LEED IV curve after an inner potential correction, the graphene to Cu(111) surface distance is estimated to be d = 3.49 ± 0.01 Å. This value is close to that (d = 3.27 ± 0.07 Å) determined by RHEED from multilayer graphene and the interlayer spacing of 3.36 Å in graphite. This suggests that the coupling between graphene and Cu metal is similar to a pure van der Waals interaction.
 
 For graphene buffered van der Waals epitaxial tin mono-sulfide (SnS) thin film, the RHEED patterns show the (010) orientation near the surface of the SnS film grown on the single crystal graphene and a dominant (111) orientation near the surface of the SnS film grown on the polycrystalline graphene. Additional minor orientations near the surface were observed by RHEED that X-ray diffraction (XRD) is not able to detect.
+
+## PhD Defense Presentation
+
+<iframe src="https://onedrive.live.com/embed?cid=ED51AACBFF8A8879&resid=ED51AACBFF8A8879%211186&authkey=AEU5MvqMa4HzYJo&em=2" width="402" height="327" frameborder="0" scrolling="no"></iframe>
