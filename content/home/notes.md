@@ -1,7 +1,7 @@
 ---
 widget: portfolio
 headless: true
-weight: 62
+weight: 90
 title: Notes
 subtitle:
 content:

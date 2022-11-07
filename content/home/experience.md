@@ -51,7 +51,7 @@ experience:
         * Created high-fidelity 3D seismic images and velocity models by solving the optimization problem to minimize the square loss between model and data through an iterative gradient descent method.
 
   - title: Research Assistant
-    company: Department of Physics, Applied Physics and Astronomy, Rensselaer Polytehnic Institute
+    company: Rensselaer Polytehnic Institute
     company_url: 'https://www.rpi.edu/'
     company_logo: org-rpi
     location: Troy, NY 
