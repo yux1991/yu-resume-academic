@@ -65,6 +65,6 @@ email: "yux1991@gmail.com"
 highlight_name: true
 ---
 
-Yu Xiang got his PhD degree in Physics at Rensselaer Polytechnic Institute in 2019. When he was a PhD student, his research was mainly about electron diffraction data analysis. After graduation, he joined CGG as a Seismic Imager. Right now he is an Applied Scientist at Amazon working on the Natural Language Processing projects in the Amazon Smart Vehicle team.
+Yu Xiang got his PhD degree in Physics at Rensselaer Polytechnic Institute in 2019. When he was a PhD student, his research was mainly focused on electron diffraction theory and applications. After graduation, he joined CGG as a Seismic Imager. Right now he is an Applied Scientist at Amazon working on the Natural Language Processing projects in the Amazon Smart Vehicle team.
 
-{{< icon name="download" pack="fas" >}} Download his {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}} or {{< staticref "uploads/cv.pdf" "newtab" >}}CV{{< /staticref >}}.
+Download his {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}} or {{< staticref "uploads/cv.pdf" "newtab" >}}CV{{< /staticref >}}.

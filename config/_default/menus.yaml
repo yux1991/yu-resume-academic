@@ -13,18 +13,18 @@ main:
   - name: Projects
     url: '#projects'
     weight: 20
-  - name: Blogs
-    url: '#blogs'
-    weight: 25
-  - name: Notes
-    url: '#notes'
-    weight: 30
   - name: Talks
     url: '#talks'
-    weight: 40
+    weight: 30
   - name: Publications
     url: '#publications'
+    weight: 40
+  - name: Blogs
+    url: '#blogs'
     weight: 50
+  - name: Notes
+    url: '#notes'
+    weight: 60
   - name: Contact
     url: '#contact'
-    weight: 60
+    weight: 70
