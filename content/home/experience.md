@@ -32,9 +32,10 @@ experience:
     description: |2-
         Responsibilities include:
 
-        * Built machine learning models to forecast critical quantities such as shuttle transactions and warehouse transfer arrivals for sales and operations planning at Amazon, saving at least several million dollars per year.
-        * Designed new features and expanded the existing ones to support both in-cabin and remote voice based car control capabilities across different regions of the world in the Alexa automotive domain. 
-        * Reduced all forms of frictions by building statistical models to derive accurate interpretation of the customer utterances using the latest natural language processing and machine learning technologies.
+        * Created a one-stop solution to the long-term forecasting problem with highly sparse inputs by designing a novel multivariate encoder-decoder attention model with two-head outputs.
+        * Setup the data pipeline and deployed the models on native AWS to retrain and make predictions on any given cadence, while continuously monitoring the input data using a model drift detector.
+        * Designed new features and expanded the existing ones to provide personalized recommendations to the drivers via Alexa by utilizing knowledge graph built from human annotation.
+        * Improved the recall metrics of DNN models by 8% using state-of-art natural language processing technologies to help reduce the customer friction.
 
   - title: Seismic Imager
     company: CGG
@@ -49,23 +50,6 @@ experience:
         * Provided optimal quality control for the input seismic time series data by querying and analyzing information from billions of seismic records with SQL and Hadoop/Spark big-data tools.
         * Processed petabytes of seismic image sets by separating noise from signal using sparse representation, correcting artifacts with convolution/correlation, and applying interpolation with compressed sensing techniques.
         * Created high-fidelity 3D seismic images and velocity models by solving the optimization problem to minimize the square loss between model and data through an iterative gradient descent method.
-
-  - title: Research Assistant
-    company: Rensselaer Polytehnic Institute
-    company_url: 'https://www.rpi.edu/'
-    company_logo: org-rpi
-    location: Troy, NY 
-    date_start: '2015-12-01'
-    date_end: '2019-12-31'
-    description: |2-
-        Responsibilities include:
-        
-        * Systematically studied the structure, morphology, and electrical transport properties of high-quality SnS epitaxial thin films grown by physical vapor deposition (PVD).
-        * Studied the magnetism in VS_2 and MoS_2 using magneto-optical Kerr effect (MOKE) and magnetic force microscopy (MFM).
-        * Extracted the three-dimensional probability density distribution of the diffracted electron waves from the preprocessed RHEED datasets by learning the parameters of a Gaussian mixture model.
-        * Simulated thousands of crystal domains based on the Voronoi tessellation using Monte Carlo methods, in order to be combined with the experimentally extracted features for model parameter estimation.
-        * Estimated the unknown statistics such as the lattice constant, grain size, and preferred orientations from the RHEED images with a Bayesian regression approach.
-
 
 design:
   columns: '2'
