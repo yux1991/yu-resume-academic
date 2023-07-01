@@ -19,6 +19,11 @@ org_name: ''
 description: ''
 twitter: ''
 
+# Google Analytics
+marketing:
+  analytics:
+    google_analytics: 'G-ZB88BP7DQW'
+
 # Contact (edit or remove options as required)
 
 email: yux1991@gmail.com
